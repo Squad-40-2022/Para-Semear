@@ -3,27 +3,16 @@
     min-height: 100vh;
 }
 
+/*CABEÇALHO*/
 header {
     background-color: #B29272;
-}
-
-.conteudo {
-    background-color: white;
-    border-radius: 20px;
-    padding-bottom: 30px;
-}
-
-footer {
-    padding: 20px;
-    background-color: #B29272;
-    color: #ffffff;
 }
 
 .bt-log {
     width: 100%;
     height: 40px;
     text-align: start;
-    margin-bottom: 5px;
+    margin-bottom: 40px;
     color: #1A2915;
     background-color: white;
 }
@@ -35,6 +24,68 @@ footer {
 .canva {
     background-color: #DDD3CA;
     color: #1A2915;
+}
+/*CABEÇALHO*/
+
+/*CONTEUDO*/
+.conteudo {
+    background-color: white;
+    border-radius: 20px;
+    padding-bottom: 30px;
+}
+.bt-user{
+    color: #1A2915;
+}
+.bt-user:hover{
+    background-color: #DDD3CA;
+    border: solid #DDD3CA 2px;
+}
+
+.cont-fixed{
+    max-height: calc(100vh - 212px);
+}
+
+section{
+    overflow-y: auto;
+    min-height: calc(100vh - 665px);
+}
+
+article{
+    margin-bottom: 40px;
+}
+
+.tx{
+    color: #1A2915;
+    text-decoration: none;
+}
+.tx:hover{
+    color: white;
+}
+
+.coment{
+    background-color: #e9e9e9;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.coment-form{
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+@media screen  and (max-width: 1200px){
+aside{
+    display: none;
+}    
+}
+/*CONTEUDO*/
+
+footer {
+    padding: 20px;
+    background-color: #B29272;
+    color: #ffffff;    
 }
 
 
@@ -61,5 +112,3 @@ cor 02: #B29272
 cor 03: #DCBFB3
 cor 04: #1A2915 
 */
-
-/*comentario*/
