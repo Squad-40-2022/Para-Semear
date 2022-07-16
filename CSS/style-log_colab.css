@@ -1,0 +1,65 @@
+.main {
+    background-color: #eeeeee;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #B29272;
+}
+
+.conteudo {
+    background-color: white;
+    border-radius: 20px;
+    padding-bottom: 30px;
+}
+
+footer {
+    padding: 20px;
+    background-color: #B29272;
+    color: #ffffff;
+}
+
+.bt-log {
+    width: 100%;
+    height: 40px;
+    text-align: start;
+    margin-bottom: 5px;
+    color: #1A2915;
+    background-color: white;
+}
+
+.bt-log:hover {
+    background-color: #B29272;
+}
+
+.canva {
+    background-color: #DDD3CA;
+    color: #1A2915;
+}
+
+
+/*BARRA DE NAVEGAÇÃO*/
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #B29272;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #DDD3CA;
+}
+
+/*BARRA DE NAVEGAÇÃO*/
+
+/* PALETA DE CORES
+cor 01: #DDD3CA
+cor 02: #B29272
+cor 03: #DCBFB3
+cor 04: #1A2915 
+*/
+
+/*comentario*/

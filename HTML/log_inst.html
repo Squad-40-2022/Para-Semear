@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="../CSS/parasemear.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <div class="row">
+
+                <!--BARRA DE NAVEGAÇÃO-->
+                <nav class="navbar navbar-expand-md navbar-light col-10 d-flex align-items-end">
+                    <a class="navbar-brand" href="../index.html"><img src="../IMG/logo/logo-100px.png" alt=""></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="collapsibleNavId">
+                        <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="../index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#">Colaboradores</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#">Instituições</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <!--Menu lateral-->
+                <div class="col-1 d-flex align-items-end pb-2">
+                    <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
+                        aria-controls="offcanvasScrolling"><img src="../IMG/Icon-login.png" alt=""></button>
+
+                    <div class="offcanvas offcanvas-end canva overflow-auto" data-bs-scroll="true"
+                        data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling"
+                        aria-labelledby="offcanvasScrollingLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasScrollingLabel"><img src="../IMG/user.png" alt="">
+                                Verde oliva</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="row p-5">
+                            <button class="btn bt-log" data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop001">Dados</button>
+                            <button class="btn bt-log" data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop002">Projetos </button>
+                            <button class="btn bt-log" data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop003">Doação</button>
+                            <button class="btn bt-log" data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop004">Voluntarios</button>
+                            <button class="btn bt-log" data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop005">Relatórios</button>
+                            <button class="btn bt-log">Configurações e privacidade</button>
+                            <button class="btn bt-log">Ajuda e suporte</button>
+                            <button class="btn bt-log">Sair</button>
+                        </div>
+                    </div>
+                </div>
+                <!--menu lateral-->
+
+            </div>
+        </div>
+
+        <!--conteúdo menu lateral-->
+        <!-- Modal 001 sua conta -->
+        <div class="modal modal-dialog-scrollable" id="staticBackdrop001" data-bs-backdrop="static"
+            data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel001" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel001">Verde Oliva</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <table>
+                            <tr>
+                                <td> Razão Social:</td>
+                                <td> Verde Oliva ME</td>
+                            </tr>
+                            <tr>
+                                <td> Nome Fantasia:</td>
+                                <td> Verde Oliva </td>
+                            </tr>
+                            <tr>
+                                <td> CNPJ:</td>
+                                <td> 000258021/0001</td>
+                            </tr>
+                            <tr>
+                                <td> Endereço:</td>
+                                <td> Coronel de matos, 507 </td>
+                                <td>Bairro:</td>
+                                <td>Flores do nascer</td>
+                            </tr>
+                            <tr>
+                                <td> Cep:</td>
+                                <td> 06915-169</td>
+                                <td> Cidade:</td>
+                                <td> Rio de Janeiro</td>
+                                <td>UF:</td>
+                                <td>RJ</td>
+                            </tr>
+                            <tr>
+                                <td>email:</td>
+                                <td colspan="2">faleconosco@verdeoliva.com.br</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">Telefones:</td>
+                                <td> (21) 2648-7898</td>
+                            </tr>
+                            <tr>
+                                <td> (21) 96587-3636</td>
+                            </tr>
+                            <tr>
+
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+
+                        <button type="submit" class="btn btn-primary">Alterar</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Finalizar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- modal 002 projetos-->
+        <div class="modal modal-dialog-scrollable" id="staticBackdrop002" data-bs-backdrop="static"
+            data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel002" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel002">Projetos cadastrados</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h5> Manhas de Sexta</h5>
+                        <p> todas as sexta os contemplados pela ong apresentão suas poesias e versos em um saral
+                            matinal,
+                            esse precisa de materiais de audio e iluminação, alem de um voluntario com habilidades para
+                            organização de eventos e sarais</p>
+                        <br>
+                        <hr>
+                        <br>
+                        <h5> Contando um Conto</h5>
+                        <p> As quartas um livro da biblioteca é lido por um voluntario, e a historia serve de base para
+                            que
+                            as crianças e adolescentes criem sua propria versão que são apresentadas nas terças da
+                            semana
+                            seguinte</p>
+                    </div>
+                    <div class="modal-footer">
+
+                        <button type="submit" class="btn btn-primary">Novo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- modal 003 Doações -->
+        <div class="modal modal-dialog modal-dialog-scrollable" id="staticBackdrop003" data-bs-backdrop="static"
+            data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel003" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel003">Doações Recebidas</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <table>
+                            <tr>
+                                <th> Data</th>
+                                <th> Tipo</th>
+                                <th> Qde.</th>
+                                <th> Origem</th>
+
+                            </tr>
+                            <tr>
+                                <td> 18/03/2022</td>
+                                <td> Monetario </td>
+                                <td> R$ 50,00 </td>
+                                <td> Anônino </td>
+                            </tr>
+                            <tr>
+                                <td> 07/05/2022</td>
+                                <td> Monetario </td>
+                                <td> R$ 30,00</td>
+                                <td> CaCho e Liso Ltda.</td>
+                            </tr>
+                            <tr>
+                                <td> 26/05/2022</td>
+                                <td> Monetario </td>
+                                <td> R$ 50,00</td>
+                                <td> Antonio Carlos</td>
+                            </tr>
+                            <tr>
+                                <td> 26/05/2022</td>
+                                <td> Livro</td>
+                                <td> 60 un</td>
+                                <td> Antonio Carlos</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+
+                        <button type="submit" class="btn btn-primary">Atualizar</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Finalizar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--modal 004 Voluntarios-->
+        <div class="modal modal-dialog modal-dialog-scrollable" id="staticBackdrop004" data-bs-backdrop="static"
+            data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel004" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel004">Verde Oliva</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <table>
+                            <tr>
+                                <th> Nome:</th>
+                                <td> André Marques</td>
+                                <td> ... </td>
+                                <td> <button class="btn btn-ligth"> ver contato </button></td>
+                            </tr>
+                            <tr>
+                                <th> Nome:</th>
+                                <td> Angela Campos</td>
+                                <td> ... </td>
+                                <td> <button class="btn btn-ligth"> ver contato </button></td>
+                            </tr>
+                            <tr>
+                                <th> Nome:</th>
+                                <td> João Henrique</td>
+                                <td> ... </td>
+                                <td> <button class="btn btn-ligth"> ver contato </button></td>
+                            </tr>
+                            <tr>
+                                <th> Nome:</th>
+                                <td> Priscila Campos</td>
+                                <td> ... </td>
+                                <td> <button class="btn btn-ligth"> ver contato </button></td>
+                            </tr>
+                            <tr>
+                                <th> Nome:</th>
+                                <td> Leandro Santos</td>
+                                <td> ... </td>
+                                <td> <button class="btn btn-ligth"> ver contato </button></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+
+                        <button type="submit" class="btn btn-primary">Atualizar</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Finalizar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--modal 005 Prestação de contas-->
+        <div class="modal modal-dialog-scrollable" id="staticBackdrop005" data-bs-backdrop="static"
+            data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel005" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel005">Relatorio de gastos</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <table>
+                            <tr>
+                                <th><label for="imagem">Imagem:</label></th>
+                                <td> <input type="file" name="" id="imagem"></td>
+                            </tr>
+                            <tr>
+                                <th><label for="relatorio">Descrição:</label></th>
+                                <td><textarea name="" id="relatorio" cols="40" rows="20"></textarea></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+
+                        <button type="submit" class="btn btn-primary">enviar</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Finalizar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--conteúdo menu lateral-->
+    </header>
+    <!--BARRA DE NAVEGAÇÃO-->
+
+
+
+    <!--CONTEUDO-->
+    <div class="container conteudo my-4 px-4">
+
+        <div class="row ">
+            <div class="col-3"><img src="../IMG/user.png" alt="" style="height: 50px; width: 70px;">
+                <p> Verde Oliva </p>
+            </div>
+            
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-3">
+                <h5> Visualizações</h5>
+                <p> 7 visitas na ultima semana</p>
+                <p class="sub"> Grafico de visitas aqui</p>
+            </div>
+            <div class="col-12 col-md-7 overflow-auto">
+                <div class="row">
+                    <h3> Doaçoes no ultimo mês</h3>
+                    <p>Gráfico de doações aqui</p>
+                    <hr>
+                    <h3> Voluntarios no ultimo mês</h3>
+                    <p>Gráfico de novos voluntarios aqui</p>
+                    <hr>
+                    <h3> Acolhidos no ultimo mês</h3>
+                    <p>Gráfico de crescimento de contemplados aqui</p>
+                    <hr>
+                    <h3> Veja as Instituições que mais fizeram eventos esse mês</h3>
+                    <p>Lista das instituições aqui</p>
+                    <hr>
+                    <h3> Projetos Que tiveram ótimo desempenho</h3>
+                    <p>dados dos projetos</p>
+                    <hr>
+                    
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <!--CONTEUDO-->
+
+    <!--RODAPÉ-->
+    <footer>
+        <div class="nav justify-content-between container">
+            <div class="col-6 col-sm-5 col-lg-4">
+                <h6 class="tx-cinzae">Centrais de atendimento</h6>
+                <ul class="nav flex-column">
+                    <li>Av. Borges de Medeiros, 159<br>Porto Alegre/RS</li>
+                    <li>(51)3456-5555</li>
+                    <li class="nav-item"><a href="#" class="nav-link p-0 text-white">Entre em
+                            contato</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6 col-sm-5 col-lg-4">
+                <form>
+                    <h6>Deixe seu email para receber nossas ofertas!</h6>
+                    <div class="d-flex w-100 gap-2">
+                        <input id="newsletter1" type="text" class="form-control" placeholder="Digite seu email">
+                        <button class="btn btn-light" type="button">Inscrever</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="row">
+            <p class="m-0 text-center">© 2022 Company, Inc. All rights reserved.</p>
+        </div>
+
+    </footer>
+    <!--RODAPÉ-->
+
+    <!--SCRIPT-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
