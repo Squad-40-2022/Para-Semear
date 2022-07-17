@@ -3,28 +3,38 @@
     height:100vh ;
     background-color: blue;
 }
-.Cabeçalho{ 
- width: 100%;
- height: 205px;
+header{ 
+
  background-color:  #B29272;
 }
-.logo{ 
-    width: 15%;
-    height: 200px;
-    align-content: flex-start;
-    background-color:  white;
+.modal-content {
+    background-color: #DDD3CA;
+    color: #1A2915;
 }
-.menu{ 
+.bt-log {
     width: 100%;
-    height:60px ;
-    align-content: flex-start;
-    background-color: #B29272;
-    
+    height: 40px;
+    text-align: start;
+    margin-bottom: 5px;
+    color: #1A2915;
+    background-color: white;
 }
 
-.corrosel{ 
+.bt-log:hover {
+    background-color: #B29272;
+}
+.tx {
+    color: #1A2915;
+    text-decoration: none;
+}
+.canva {
+    background-color: #DDD3CA;
+    color: #1A2915;
+}
+
+.d-block{ 
 width: 100%;
-height:1000px ;
+height:100vh !important ;
 }
 
 .pagina1{ 
@@ -40,17 +50,33 @@ height:1000px ;
 }
 .fim{ 
     width:100% ;
-    height:900px;
+    height:100vh;
     background-color: aquamarine;   
 }
 
-.rodape{ 
-    width: 100%;
-    height: 300px;
-    background-color: #B29272;
-}
-p{ 
+
+.p{ 
     text-align:justify ;
     font-size: 50px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+footer {
+    padding: 20px;
+    background-color: #B29272;
+    color: #ffffff;
+}
+/*BARRA DE NAVEGAÇÃO*/
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #b2927200;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #ddd3ca00;
 }
