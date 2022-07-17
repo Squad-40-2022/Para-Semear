@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Semear</title>
+    <title>Login Instituição</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="../CSS/style-login.css">
+    <link rel="icon" type="imagem/png" href="../IMG/icon-nav.png"/>
 </head>
 
 <body>
@@ -46,49 +47,44 @@
         <!--CONTEUDO-->
         <div class="container conteudo my-4 px-4">
             <div class="login row justify-content-around py-5">
-                <div class="col-6">
-                    <h1 class="text-center mt-5">Ficamos felizes em ter voce aqui,
-                        <br> vamos realizar sonhos juntos.
-                    </h1>
-                        <img src="../IMG/logo/logo-preto.png" alt="semear" class="m-4 img-fluid">
+                <div class="col-xl-7 col-lg-6">
+                    <h1 class="text-center mt-5 tx" id="texto-login">Ficamos felizes em ter você aqui, vamos realizar sonhos juntos.</h1>
+                    <img src="../IMG/logo/logo-preto.png" alt="semear" class="m-4 img-fluid" id="img-logo2">
                 </div>
 
-                <div class="col-3">
-                    <div class="card-login p-5">
+                <div class="col-xl-4 col-lg-5 col-md-7 col-sm-9">
+                    <div class="card-login pt-5 px-2 tx">
+                        <div class="col-4" id="img-logo">
+                            <img src="../IMG/logo/logo-preto.png" alt="semear" class="my-3 img-fluid">
+                        </div>
                         <h3>Login</h3>
-                        <h5>Colaborador</h5>
-                        <form action="">
-                            <div class="entrada">
-                                <label for="email">Email</label>
-                                <input type="email" name="email" placeholder="digite seu email">
+                        <h5 class="mb-4">Instituição</h5>
+                        <form class="w-75">
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" placeholder="digite seu email ...">
                             </div>
-                            <br>
-                            <div class="entrada">
-                                <label for="email">Senha</label>
-                                <input type="password" name="senha" placeholder="digite sua senha">
+                            <div class="mb-1">
+                                <label for="exampleInputPassword1" class="form-label">Senha</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1"
+                                    placeholder="digite sua senha ...">
                             </div>
-                            <div class="senha-btn">
-                                <label class="form-check-label" for="gridCheck"><a href="#">
-                                        Esqueci a Senha
-                                    </a></label>
+                            <a href="#" class="tx">Esqueci minha senha</a>
+                            <div class="my-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Manter conectado</label>
                             </div>
-                            <br>
-                            <button class="btn-entrar"><a href="">Entrar</a></button>
-                            <br>
-    
-                            <h2>Cadastre-se</h2>
-                            <div class="form-check">
-                                <label class="form-check-label" for="gridCheck"><a href="cadastro doador.html">
-                                        Como Doador
-                                    </a></label>
+                            <div class="text-center mb-5">
+                                <a href="log_inst.html" type="submit" class="tx btn btn-entrar">Conectar</a>
                             </div>
-                            <div class="form-check">
-                                <label class="form-check-label" for="gridCheck"><a href="cadastro ong.html">
-                                        Como Ong
-                                    </a></label>
-                                <br>
+                            <div class="text-center">
+                                <h3 class="mb-2">Cadastrar</h3>
+                                <a href="cadastro_colab.html" class="tx btn">Como Colaborador</a>
+                                <a href="cadastro_inst.html" class="tx btn">Como Instituição</a>
                             </div>
                         </form>
+                        <small class="mt-4 mb-3"><a href="login_c.html" class="tx">Sou um Colaborador</a></small>
                     </div>
                 </div>
             </div>
