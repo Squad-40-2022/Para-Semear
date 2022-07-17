@@ -1,0 +1,120 @@
+.main {
+    background-color: #eeeeee;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #B29272;
+}
+
+.bt-log {
+    width: 100%;
+    height: 40px;
+    text-align: start;
+    margin-bottom: 5px;
+    color: #1A2915;
+    background-color: white;
+}
+
+.bt-log:hover {
+    background-color: #B29272;
+}
+
+.canva {
+    background-color: #DDD3CA;
+    color: #1A2915;
+}
+
+.conteudo {
+    background-color: white;
+    border-radius: 20px;
+    padding-bottom: 30px;
+    display: flex;
+    display-direction:row;
+    
+}
+.bg-gradienti {
+    background:#dcbfb3
+}
+
+.flip-container {
+    padding: 3%;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 0;
+    align-items:center;
+    justify-content:center;
+    width: 300px;
+    height: 200px;
+    perspective: 1000px;
+    flex-direction: row;
+  
+
+  }
+  .flipper{
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+}
+.flip-container:hover .flipper{
+	transform: rotatey(180deg);
+	
+
+}
+.flipper{
+	width: 100%;
+	height: 100%;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+}
+.flipper{
+	position: relative;
+	...
+}
+.front, .back{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+.back{
+	transform: rotateY(180deg);
+}
+.front, .back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  
+
+  
+
+footer {
+    padding: 20px;
+    background-color: #B29272;
+    color: #ffffff;
+}
+
+/*BARRA DE NAVEGAÇÃO*/
+::-webkit-scrollbar{
+    width: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #B29272;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-track{
+    background-color: #DDD3CA;
+}
+/*BARRA DE NAVEGAÇÃO*/
+
+/* PALETA DE CORES
+cor 01: #DDD3CA
+cor 02: #B29272
+cor 03: #DCBFB3
+cor 04: #1A2915 
+*/
+
+/*comentario*/
