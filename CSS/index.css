@@ -1,0 +1,56 @@
+.Principal{ 
+    width:100vw ;
+    height:100vh ;
+    background-color: blue;
+}
+.Cabeçalho{ 
+ width: 100%;
+ height: 205px;
+ background-color:  #B29272;
+}
+.logo{ 
+    width: 15%;
+    height: 200px;
+    align-content: flex-start;
+    background-color:  white;
+}
+.menu{ 
+    width: 100%;
+    height:60px ;
+    align-content: flex-start;
+    background-color: #B29272;
+    
+}
+
+.corrosel{ 
+width: 100%;
+height:1000px ;
+}
+
+.pagina1{ 
+    width: 100vw;
+    height: 100vh;
+    background-color: beige;  
+}
+
+.segunda{ 
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+}
+.fim{ 
+    width:100% ;
+    height:900px;
+    background-color: aquamarine;   
+}
+
+.rodape{ 
+    width: 100%;
+    height: 300px;
+    background-color: #B29272;
+}
+p{ 
+    text-align:justify ;
+    font-size: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
