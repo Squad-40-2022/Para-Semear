@@ -39,26 +39,19 @@
                 </nav>
                 <!--LOGIN-->
                 <div class="col-1 d-flex align-items-end pb-2">
-                    <button class="btn" type="button" data-bs-toggle="offcanvas"
-                        data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><img
-                            src="../IMG/Icon-login.png" alt=""></button>
+                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <img src="../IMG/Icon-login.png" alt="">
+                    </button>
 
-                    <div class="offcanvas offcanvas-end canva" data-bs-scroll="true" data-bs-backdrop="false"
-                        tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
-                        <div class="offcanvas-header">
-                            <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Login</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
-                                aria-label="Close"></button>
-                        </div>
-                        <div class="row p-5">
-                            <button class="btn bt-log">Sua conta</button>
-                            <button class="btn bt-log">Novidades</button>
-                            <button class="btn bt-log">Nova doação</button>
-                            <button class="btn bt-log">Minhas instituições</button>
-                            <button class="btn bt-log">Relatórios</button>
-                            <button class="btn bt-log">Configurações e privacidade</button>
-                            <button class="btn bt-log">Ajuda e suporte</button>
-                            <button class="btn bt-log">Sair</button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content p-4">
+                                <h3 class="mb-4">Olá! Você é?</h3>
+                                <button class="btn bt-log mb-4"><a href="log_colab.html" class="tx">Colaborador</a></button>
+                                <button class="btn bt-log mb-4"><a href="./login_colab/doacao.html" class="tx">Instituição</a></button>
+                            </div>
                         </div>
                     </div>
                 </div>
