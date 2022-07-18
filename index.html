@@ -1,69 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 
 <head>
-  <meta charset='utf-8'>
-  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-  <title> Para Semear</title>
-  <link rel='stylesheet' type='text/css' media='screen' href="./CSS/index.css">
-  <!-- CSS only -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-  <link rel="icon" type="imagem/png" href="../IMG/icon-nav.png" />
-  
+  <link rel="stylesheet" href="CSS/index.css">
+  <link rel="icon" type="imagem/png" href="IMG/icon-nav.png" />
 </head>
 
 <body>
+  <!--BARRA DE NAVEGAÇÃO-->
   <header>
     <div class="container">
-        <div class="row">
-            <nav class="navbar navbar-expand-md navbar-light col-10 d-flex align-items-end">
-                <a class="navbar-brand" href="../index.html"><img src="../IMG/logo/logo-100px.png" alt=""></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="collapsibleNavId">
-                    <ul class="navbar-nav me-auto mt-2 mt-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="../HTML/colaboradores.html">Colaboradores</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="../HTML/instituicoes.html">Instituições</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-            <!--LOGIN-->
-            <div class="col-1 d-flex align-items-end pb-2">
-                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    <img src="../IMG/Icon-login.png" alt="">
-                </button>
+      <div class="row">
+        <nav class="navbar navbar-expand-md navbar-light col-10 d-flex align-items-end">
+          <a class="navbar-brand" href="index.html"><img src="IMG/logo/logo-100px.png" alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId"
+            aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="HTML/colaboradores.html">Colaboradores</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="HTML/instituicoes.html">Instituições</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!--LOGIN-->
+        <div class="col-1 d-flex align-items-end pb-2">
+          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <img src="IMG/Icon-login.png" alt="">
+          </button>
 
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content p-4">
-                            <h3 class="mb-4">Olá! Você é?</h3>
-                            <button class="btn bt-log mb-4"><a href="../html/login_c.html" class="tx">Colaborador</a></button>
-                            <button class="btn bt-log mb-4"><a href="../html/login_i.html" class="tx">Instituição</a></button>
-                        </div>
-                    </div>
-                </div>
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content p-4">
+                <h3 class="mb-4">Olá! Você é?</h3>
+                <button class="btn bt-log mb-4"><a href="HTML/login_c.html" class="tx">Colaborador</a></button>
+                <button class="btn bt-log mb-4"><a href="HTML/log_inst.html" class="tx">Instituição</a></button>
+              </div>
             </div>
-            <!--LOGIN-->
+          </div>
         </div>
+        <!--LOGIN-->
+      </div>
     </div>
-    
-</header>
-  <div class="principal">
-   <div class="carrosel">
-       
+  </header>
+  <!--BARRA DE NAVEGAÇÃO-->
+
+  <!--CONTEUDO-->
+  <div>
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
@@ -74,27 +73,31 @@
           aria-label="Slide 3"></button>
       </div>
       <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="../IMG/IMG Vini/pexels-pixabay-270246.jpg" class="d-block w-100" alt="">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Teste 1</h5>
-            <p>Some representative placeholder content for the first slide.</p>
+        <div class="carousel-item active bloco01">
+          <div class="d-flex justify-content-center align-items-center">
+            <img src="IMG/doador.png" class="h-100" alt="..." style="vertical-align:middle;">
+            <div class="texto-slide p-4 tx-slide">
+              <h1 class="mx-5">Venha ser a engrenagem na roda da educação</h1>
+              <a href="./HTML/cadastro_colab.html" class="btn bt-slide mx-5">Seja um doador</a>
+            </div>
           </div>
         </div>
-        <div class="carousel-item">
-          <img src="../IMG/IMG Vini/pexels-rodnae-productions-6647037.jpg" class="d-block w-100" alt="100px"
-            alt="100%">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Teste 2</h5>
-            <p>Some representative placeholder content for the second slide.</p>
+        <div class="carousel-item bloco01">
+          <div class="d-flex justify-content-center align-items-center">
+            <img src="IMG/instituicao.png" class="h-100" alt="..." style="vertical-align:middle;">
+            <div class="texto-slide px-5 py-4 tx-slide">
+              <h1 class="mx-5">Venha ser a engrenagem na roda da educação</h1>
+              <a href="./HTML/cadastro_inst.html" class="btn bt-slide mx-5">Cadastre sua instituição</a>
+            </div>
           </div>
         </div>
-        <div class="carousel-item">
-          <img src="../IMG/IMG Vini/pexels-tima-miroshnichenko-5427862.jpg" class="d-block w-100"
-            style="height:890px ; width: 4000px;" alt="">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Teste</h5>
-            <p>Some representative placeholder content for the third slide.</p>
+        <div class="carousel-item bloco01">
+          <div class="d-flex justify-content-center align-items-center">
+            <img src="IMG/voluntario.png" class="h-100" alt="..." style="vertical-align:middle;">
+            <div class="texto-slide px-5 py-4 tx-slide">
+              <h1 class="mx-5">Faça parte da mudança</h1>
+              <a href="./HTML/cadastro_colab.html" class="btn bt-slide mx-5">Seja um voluntário</a>
+            </div>
           </div>
         </div>
       </div>
@@ -109,25 +112,31 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
-    
-
   </div>
-
-  <div class="pagina1">
-    <h5> Quem somos. </h5>
-    <p class="p"> A ideia de contribuir com a educação no campo</p>
+  <div class="bloco02 p-5">
+    <div class="d-flex justify-content-center align-items-center bloco02">
+      <img src="IMG/logo/logo-fundo.png" alt="" class="img-fluid">
+      <div class="texto-slide px-5 py-4 tx-pg">
+        <h1 class="mx-5"><big>Quem somos ...</big></h1>
+        <h5 class="mx-5">Somos um grupo que acreditamos que todos tem o direito de se comunicar e participar da
+          sociedade e a escrita
+          é um dos maiores meios de comunicação, portanto ter acesso a leitura abre as portas para se comunicar com o
+          mundo.</h5>
+      </div>
+    </div>
   </div>
-
-  <div class="segunda">
-    <h6> Realidade transfotmada </h6>
-    <p class="p"> O impacto e a transformação na vida das pessoas</p>
+  <div class="bloco02">
+    <div class="d-flex justify-content-end align-items-center">
+      <img src="IMG/logo/logo-esq.png" alt="">
+      <div class="texto-slide px-5 py-4 tx-pg">
+        <h1 class="mx-5 text-start"><big>Conheça nossos parceiros</big></h1>
+        <h5 class="mx-5">Em construção...</h5>
+      </div>
+    </div>
   </div>
+  <!--CONTEUDO-->
 
-  <div class="fim">
-    <h7> Parceiros que transforman. </h7>
-    <p class="p"> Conheça as instituições que contribui para este projeto. </p>
-  </div>
-
+  <!--RODAPÉ-->
   <footer>
     <div class="nav justify-content-between container">
       <div class="col-6 col-sm-5 col-lg-4">
@@ -156,19 +165,9 @@
     </div>
 
   </footer>
+  <!--RODAPÉ-->
 
-
-  </div>
-
-
-
-
-
-
-
-
-
-  <!-- JavaScript Bundle with Popper -->
+  <!--SCRIPT-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
     crossorigin="anonymous"></script>

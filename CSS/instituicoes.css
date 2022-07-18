@@ -49,11 +49,6 @@ text-align: center;
 .profile-area{
     padding: 100px 0px 200px;
 }
-.modal-content {
-    background-color: #DDD3CA;
-    color: #1A2915;
-}
-
 .tx {
     color: #1A2915;
     text-decoration: none;
@@ -65,5 +60,12 @@ text-align: center;
     margin-bottom: 5px;
     color: #1A2915;
     background-color: white;
+}
+.bt-log:hover {
+    background-color: #B29272;
+}
+.modal-content {
+    background-color: #DDD3CA;
+    color: #1A2915;
 }
 /* INSTITUIÇÕES */
