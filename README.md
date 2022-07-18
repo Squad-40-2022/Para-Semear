@@ -43,5 +43,5 @@ R-https://1drv.ms/w/s!AgvSQ9J1EpZ2g8J4gVck2k1SVZAMgg?e=XxoJmk
   
 8. Qual a ferramenta de gerenciamento de projeto será usada para o monitoramento das atividades?  Ex: Trello, Asana, Jira, Monday  
  R-para brains storm e disposição de ideias, foi usado o miro. para reuniões e comunicação utilizamos o teams e o whatsapp, para organização de atividades e colaboração de etapas, foi usado o trello,
- para registrar a evoulçao do projeto, usamos um documento word em nuvem e para organização de cronograma alem do trello, usamos uma planilha de excell, temos ainda o figma para escopo de framework.
+ para registrar a evoulçao do projeto, usamos um documento word em nuvem e para organização de cronograma alem do trello, usamos uma planilha de excell, temos ainda o figma para escopo de wariframe.
 
