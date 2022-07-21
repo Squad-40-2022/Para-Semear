@@ -28,7 +28,7 @@ Demais integrantes:
    R- Nosso público serão as instituições(ongs), com projetos educacionais focados na área rural, dessa forma a solução poderá ser aplicada em qualquer pessoa, que seja acolhida por uma organização independente de grau de escolaridade, ou idade
    
 4. O problema foi escolhido com base em quais dados oficiais? Como vocês identificaram que esse realmente é um problema para o público-alvo? Indique as referências usadas, justificando a sua escolha. 
-  R-
+  R-https://docs.google.com/document/d/1v-M7_DrXAg9XSaqOH506NO4FisSER-OefOvSfNhYlqM/edit?usp=sharing
   
 5. Como esse problema afeta o público-alvo? 
   R-A falta de insumos governamentais voltados a educação torna ongs e instituições necessárias, como meio de atingir objetivos específicos sendo a referencia do nosso projeto a erradicação do analfabetismo na área rural.
