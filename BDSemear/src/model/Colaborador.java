@@ -1,6 +1,7 @@
 package model;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class Colaborador {
 
@@ -9,11 +10,13 @@ public class Colaborador {
 	private char genero, volunt;
 	private LocalDate nasc;
 	
+	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+	
 	public Colaborador() {
 	}
 	
 	public Colaborador(int id, String cpfOrCnpj, String nome, String sobNome, String tel, String end, String cidade,
-			String uf, String email, String senha, String disp, char genero, char volunt, LocalDate nasc) {
+			String uf, String email, String senha, String disp, char genero, char volunt, String nasc) {
 		this.id = id;
 		this.cpfOrCnpj = cpfOrCnpj;
 		this.nome = nome;
@@ -27,7 +30,7 @@ public class Colaborador {
 		this.disp = disp;
 		this.genero = genero;
 		this.volunt = volunt;
-		this.nasc = nasc;
+		this.nasc = LocalDate.parse(nasc, formatter);
 	}
 	
 	public int getId() {
@@ -108,11 +111,11 @@ public class Colaborador {
 	public void setVolunt(char volunt) {
 		this.volunt = volunt;
 	}
-	public LocalDate getNasc() {
-		return nasc;
+	public String getNasc() {
+		return formatter.format(nasc);
 	}
-	public void setNasc(LocalDate nasc) {
-		this.nasc = nasc;
+	public void setNasc(String nasc) {
+		this.nasc = LocalDate.parse(nasc, formatter);
 	}
 	
 }
