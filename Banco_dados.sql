@@ -16,7 +16,7 @@ id_ins INTEGER PRIMARY KEY auto_increment
 );
 
 CREATE TABLE COLABORADORES (
-id_cli INTEGER PRIMARY KEY auto_increment,
+id_col INTEGER PRIMARY KEY auto_increment,
 cpf_cnpj_col VARCHAR(15),
 nome_col VARCHAR(30),
 dn_col DATE,
@@ -27,7 +27,7 @@ sn_col VARCHAR(50),
 sexo_col CHAR(1),
 tel_col VARCHAR(15),
 end_col VARCHAR(50),
-vol CHAR(2),
+vol CHAR(1),
 dis_col VARCHAR(50),
 cid_col VARCHAR(10)
 );
@@ -35,14 +35,14 @@ cid_col VARCHAR(10)
 CREATE TABLE DOACAO (
 id_doa INTEGER PRIMARY KEY auto_increment,
 tipo_doa CHAR(1),
-Oque VARCHAR(60),
+desc_doa VARCHAR(60),
 qt_doa DECIMAL(8,2),
 com_doa VARCHAR(100),
 data_doa DATETIME,
 anonimo CHAR(1),
-id_cli INTEGER,
+id_col INTEGER,
 id_ins INTEGER,
-FOREIGN KEY(id_cli) REFERENCES COLABORADORES (id_cli),
+FOREIGN KEY(id_col) REFERENCES COLABORADORES (id_col),
 FOREIGN KEY(id_ins) REFERENCES INSTITUICOES (id_ins)
 );
 
@@ -73,7 +73,7 @@ FOREIGN KEY(id_ins) REFERENCES INSTITUICOES (id_ins)
 
 CREATE TABLE VOLUNTARIADO (
 id_ins INTEGER,
-id_cli INTEGER,
+id_col INTEGER,
 FOREIGN KEY(id_ins) REFERENCES INSTITUICOES (id_ins),
-FOREIGN KEY(id_cli) REFERENCES COLABORADORES (id_cli)
+FOREIGN KEY(id_col) REFERENCES COLABORADORES (id_col)
 );
