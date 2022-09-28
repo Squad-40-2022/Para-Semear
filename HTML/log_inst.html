@@ -10,7 +10,32 @@
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="../CSS/style-log_inst.css">
     <link rel="stylesheet" href="../CSS/style-log_colab.css">
-    <link rel="icon" type="imagem/png" href="../IMG/icon-nav.png"/>
+    <link rel="icon" type="imagem/png" href="../IMG/icon-nav.png" />
+    <style>
+        .lin {
+            color: #533d27;
+        }
+
+        .lon {
+            color: darkgreen;
+        }
+
+
+        a:visited {
+            text-decoration: none;
+            color: darkgreen;
+        }
+
+        a:hover {
+            text-decoration: none;
+            color: #533d27;
+        }
+
+        a:active {
+            text-decoration: none;
+            color: green;
+        }
+    </style>
 </head>
 
 <body>
@@ -282,26 +307,31 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="staticBackdropLabel005">Relatorio de gastos</h5>
+                        <h4 class="modal-title lon" id="staticBackdropLabel005">Relatório de gastos :</h4>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <table>
                             <tr>
-                                <th><label for="imagem">Imagem:</label></th>
-                                <td> <input type="file" name="" id="imagem"></td>
+                                <p class="fs-3 color lin">
+                                    Acesse a seguir nosso relatório de prestação de contas e de transparência sobre em
+                                    que temos investido e oque conseguimos conquistar até aqui.
+                                    Esperamos fortalecer nosso vínculo e desde já agrademos a sua confiança!
+
+
+                                </p>
+
                             </tr>
-                            <tr>
-                                <th><label for="relatorio">Descrição:</label></th>
-                                <td><textarea name="" id="relatorio" cols="40" rows="20"></textarea></td>
+
+                            <img src="../IMG/imagens.colaboradores/pdf-download-2617 (1).png " alt="">
+                            <a href="https://drive.google.com/file/d/1QlCTOSrBiZFHb7cPNabd5DfkbTAc9Kvl/view?usp=sharing"
+                                target="_blank">Relatório anual 2021 </a>
                             </tr>
+
+
                         </table>
                     </div>
-                    <div class="modal-footer">
 
-                        <button type="submit" class="btn btn-primary">enviar</button>
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Finalizar</button>
-                    </div>
                 </div>
             </div>
         </div>
@@ -318,7 +348,7 @@
             <section class="col-3"><img src="../IMG/user.png" alt="" style="height: 50px; width: 50px;">
                 <p> Verde Oliva </p>
             </section>
-            
+
         </div>
         <div class="row m-4">
             <section class="col-12 col-md-3 coment me-5">
@@ -343,7 +373,7 @@
                     <h3> Projetos Que tiveram ótimo desempenho</h3>
                     <p>dados dos projetos</p>
                     <hr>
-                    
+
                 </div>
 
             </section>
