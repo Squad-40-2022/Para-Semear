@@ -9,9 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import connection.Conexao;
-import model.Cliente;
 import model.Colaborador;
-import model.Local;
 
 public class ColaboradorDAO {
 	Connection conn = null;
@@ -144,11 +142,11 @@ public class ColaboradorDAO {
 
 	}
 
-	public List<Cliente> getClientes() {
+	public List<Colaborador> getColaboradores() {
 
 		String sql = "SELECT * FROM colaborador";
 
-		List<Cliente> clientes = new ArrayList<Cliente>();
+		List<Colaborador> colaboradores = new ArrayList<Colaborador>();
 
 		ResultSet rset = null;
 
@@ -161,24 +159,24 @@ public class ColaboradorDAO {
 
 			while (rset.next()) {
 
-				Cliente cli = new Cliente();
-				Local local = new Local();
+				Colaborador col = new Colaborador();
 				
-				cli.setId(rset.getInt("id_cli"));
-				cli.setCpf(rset.getString("cpf_cli"));
-				cli.setNome(rset.getString("nome_cli"));
-				cli.setTel(rset.getString("tel_cli"));
-				cli.setSenha(rset.getString("senha"));
-				cli.setEmail(rset.getString("email"));
-				cli.setEnde(rset.getString("logradouro"));
-				cli.setNasc(formatter.format(rset.getDate("data_nasc")));
-				
-				local.setId(rset.getInt("id_local"));
-				local.setCidade(rset.getString("cidade"));
-				local.setUf(rset.getString("uf"));
-				cli.setLocal(local);
+				col.setId(rset.getInt("id_col"));
+				col.setCpfOrCnpj(rset.getString("cpf_cnpj_col"));
+				col.setNome(rset.getString("nome_col"));
+				col.setNasc(formatter.format(rset.getDate("dn_col")));
+				col.setEmail(rset.getString("email_col"));
+				col.setSenha(rset.getString("senha_col"));
+				col.setUf(rset.getString("uf_col"));
+				col.setSobNome(rset.getString("sn_col"));
+				col.setGenero(rset.getString("sexo_col").charAt(0));
+				col.setTel(rset.getString("tel_col"));
+				col.setEnd(rset.getString("end_col"));
+				col.setVolunt(rset.getString("vol").charAt(0));
+				col.setDisp(rset.getString("dis_col"));
+				col.setCidade(rset.getString("cid_col"));
 
-				clientes.add(cli);
+				colaboradores.add(col);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -197,17 +195,16 @@ public class ColaboradorDAO {
 				e.printStackTrace();
 			}
 		}
-		return clientes;
+		return colaboradores;
 	}
 
-	public Cliente cliById(int id) {
+	public Colaborador colById(int id) {
 
-		String sql = "SELECT * FROM colaborador WHERE id_cli=?";
+		String sql = "SELECT * FROM colaborador WHERE id_col=?";
 
 		ResultSet rset = null;
 
-		Cliente cli = new Cliente();
-		Local local = new Local();
+		Colaborador col = new Colaborador();
 
 		try {
 			conn = Conexao.createConnectionToMySQL();
@@ -217,19 +214,20 @@ public class ColaboradorDAO {
 
 			rset.next();
 
-			cli.setId(rset.getInt("id_cli"));
-			cli.setCpf(rset.getString("cpf_cli"));
-			cli.setNome(rset.getString("nome_cli"));
-			cli.setTel(rset.getString("tel_cli"));
-			cli.setSenha(rset.getString("senha"));
-			cli.setEmail(rset.getString("email"));
-			cli.setEnde(rset.getString("logradouro"));
-			cli.setNasc(formatter.format(rset.getDate("data_nasc")));
-			
-			local.setId(rset.getInt("id_local"));
-			local.setCidade(rset.getString("cidade"));
-			local.setUf(rset.getString("uf"));
-			cli.setLocal(local);
+			col.setId(rset.getInt("id_col"));
+			col.setCpfOrCnpj(rset.getString("cpf_cnpj_col"));
+			col.setNome(rset.getString("nome_col"));
+			col.setNasc(formatter.format(rset.getDate("dn_col")));
+			col.setEmail(rset.getString("email_col"));
+			col.setSenha(rset.getString("senha_col"));
+			col.setUf(rset.getString("uf_col"));
+			col.setSobNome(rset.getString("sn_col"));
+			col.setGenero(rset.getString("sexo_col").charAt(0));
+			col.setTel(rset.getString("tel_col"));
+			col.setEnd(rset.getString("end_col"));
+			col.setVolunt(rset.getString("vol").charAt(0));
+			col.setDisp(rset.getString("dis_col"));
+			col.setCidade(rset.getString("cid_col"));
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -248,6 +246,6 @@ public class ColaboradorDAO {
 				e.printStackTrace();
 			}
 		}
-		return cli;
+		return col;
 	}
 }
