@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+*{
+  outline: none; border:none;
+}
+
+.card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:25px;
+  min-height: 100vh;
+}
+
+.card form{
+  padding:20px;
+  width:700px;
+  background: #DDD3CA;
+  box-shadow: 0 5px 10px rgba(0,0,0,.1);
+}
+
+.card form .row{
+  display: flex;
+  flex-wrap: wrap;
+  gap:15px;
+}
+
+.card form .row .col{
+  flex:1 1 250px;
+}
+
+.card form .row .col .title{
+  font-size: 20px;
+  color:#333;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.card form .row .col .inputBox{
+  margin:15px 0;
+}
+
+.card form .row .col .inputBox span{
+  margin-bottom: 10px;
+  display: block;
+}
+
+.card form .row .col .inputBox input{
+  width: 100%;
+  border:1px solid #B29272;
+  padding:10px 15px;
+  font-size: 15px;
+  text-transform: none;
+}
+
+.card form .row .col .inputBox input:focus{
+  border:1px solid #000;
+}
+
+.card form .row .col .flex{
+  display: flex;
+  gap:15px;
+}
+
+.card form .row .col .flex .inputBox{
+  margin-top: 5px;
+}
+
+.ccard form .row .col .inputBox input{
+  width: 100%;
+  border:1px solid #B29272;
+  padding:10px 15px;
+  font-size: 15px;
+  text-transform: none;
+}
+
+.card form .row .col .inputBox input:focus{
+  border:1px solid #000;
+}
+
+.card form .row .col .flex{
+  display: flex;
+  gap:15px;
+}
+
+.card form .row .col .flex .inputBox{
+  margin-top: 5px;
+}
+
+.card form .row .col .inputBox img{
+  height: 34px;
+  margin-top: 5px;
+  filter: drop-shadow(0 0 1px #000);
+}
+
+.card form .submit-btn{
+  width: 100%;
+  padding:12px;
+  font-size: 17px;
+  background: #B29272;
+  color:#fff;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.card form .submit-btn:hover{
+  background: #c49b72;
+} form .row .col .inputBox img{
+  height: 34px;
+  margin-top: 5px;
+  filter: drop-shadow(0 0 1px #000);
+}
+
+.card form .submit-btn{
+  width: 100%;
+  padding:12px;
+  font-size: 17px;
+  background: #B29272;
+  color:#fff;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.card form .submit-btn:hover{
+  background: #d89959;
+}
+
+
+h6{
+  font-size: 2px;
+}
+
+
