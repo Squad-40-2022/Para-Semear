@@ -3,17 +3,17 @@ package crud;
 import java.util.Scanner;
 
 import CRUD.ClienteCRUD;
-import CRUD.main;
-import DAO.ClienteDAO;
+import controller.ColaboradorDAO;
+import model.Colaborador;
 import objetos.Cliente;
 
 public class ColaboradorCRUD {
 
 	public static void main(String[] args) {
 		Scanner entrada = new Scanner(System.in);
-		ClienteDAO clienteDAO = new ClienteDAO();
+		ColaboradorDAO colaboradorDAO = new ColaboradorDAO();
 
-		Cliente cliente = new Cliente();
+		Colaborador col = new Colaborador();
 
 		int menu;
 
