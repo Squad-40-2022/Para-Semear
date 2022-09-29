@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Instituição</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="InstituiCadastro.css">
+    <script src="cadastro_colab.js"></script>
+    <link rel="icon" type="imagem/png" href="../IMG/icon-nav.png" />
+</head>
+
+<body>
+    <!--BARRA DE NAVEGAÇÃO-->
+    <header>
+        <div class="nav container">
+            <div class="row">
+                <nav class="navbar navbar-expand-md navbar-light col-10 d-flex align-items-end">
+                    <a class="navbar-brand" href="../index.html"><img src="../IMG/logo/logo-100px.png" alt=""></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="collapsibleNavId">
+                        <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="../index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="../HTML/colaboradores.html">Colaboradores</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="../HTML/instituicoes.html">Instituições</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <!--LOGIN-->
+                <div class="col-1 d-flex align-items-end pb-2">
+                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <img src="../IMG/Icon-login.png" alt="">
+                    </button>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content p-4">
+                                <h3 class="mb-4">Olá! Você é?</h3>
+                                <button class="btn bt-log mb-4"><a href="login_c.html"
+                                        class="tx">Colaborador</a></button>
+                                <button class="btn bt-log mb-4"><a href="login_i.html"
+                                        class="tx">Instituição</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--LOGIN-->
+            </div>
+        </div>
+    </header>
+    <!--BARRA DE NAVEGAÇÃO-->
+
+    <!--CONTEUDO-->
+    <form class="Cadastro">
+        <h2>Cadastro da Instituição </h2>
+        <div class="container" id="cads">
+            <div class="nomes ">
+                <h5>Preencha com os dados do Responsavel</h5>
+                <div class="dados mb-3">
+                    <label for="name">Nome Completo</label><br>
+                    <input id="doc" type="text" name="nome" placeholder="Digite o Nome" required>
+                </div>
+                <div class="dados mb-3">
+                    <label for="name">Nome Completo da Instituição </label><br>
+                    <input id="doc" type="text" name="nome" placeholder="Digite o Nome" required>
+                </div>
+                <div class="dados mb-3">
+                    <label for="doc">Nascimento </label><br>
+                    <input id="doc" type="date" name="doc" placeholder="" required>
+                </div>
+                <div class="dados mb-3">
+                    <label for="doc">CPF/CNPJ::</label><br>
+                    <input id="doc" type="text" name="doc" placeholder="Digite o CPF ou CNPJ" required>
+                </div>
+
+                <div class="gen-p">
+                    <input type="radio" id="none" name="gener">
+                    <label for="radio">Ong Fisica</label><br>
+                    <input type="radio" id="none" name="gener">
+                    <label for="radio">Ong Online</label>
+                </div>
+
+                <div class="dados mb-3">
+                    <label for="email">Email::</label><br>
+                    <input id="doc" type="email" name="email" placeholder="Digite seu Email" required>
+                </div>
+                <div class="dados mb-3">
+                    <label for="password">Escolha a Senha::</label><br>
+                    <input id="doc" type="password" name="Senha" placeholder="Digite a senha" required>
+                </div>
+                <div class="dados mb-3">
+                    <label for="number">Celular com o DDD::</label><br>
+                    <input id="doc" type="tel" name="number" placeholder="Digite o Numero" required>
+                </div>
+            </div>
+            <div class="endereço">
+                <h5>Preencha abaixo com o endereço da Instituição</h5>
+                <div class="dados mb-3">
+                    <label for="Cep" class="form-label">Cep:</label><br>
+                    <input type="text" id="doc" placeholder="Digite o Cep">
+                </div>
+                <div class="dados mb-3">
+                    <label for="end" class="form-label">Rua:</label><br>
+                    <input type="text" id="doc" placeholder="Nome da Rua">
+                </div>
+                <div class="dados mb-3">
+                    <label for="end" class="form-label">Bairro:</label><br>
+                    <input type="text" id="doc" placeholder="Nome do Bairro">
+                </div>
+                <div class="dados mb-3 mb-3">
+                    <label for="end" class="form-label">Complemento:</label><br>
+                    <input type="text" id="doc" placeholder="Digite o Complemento">
+                </div>
+                <div class="dados mb-3 mb-3 dark">
+                    <label for="end" class="form-label">Cidade:</label><br>
+                    <input type="text" id="doc" placeholder="Nome da Cidade">
+                </div>
+                <div class="dados mb-3">
+                    <label for="end" class="form-label">Estado:</label><br>
+                    <input type="text" id="doc" placeholder="Nome do Estado">
+                </div>
+                <!--Termo-->
+                <input type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off">
+                <label class="btn btn-outline-dark" for="btn-check-outlined" onclick="abrirModal()">Termos e
+                    Condições</label>
+                <div id="modal-termo" class="modal-container  modal-dialog-centered modal-dialog-scrollable">
+                    <div class="termo">
+                        <button class="fechar">x</button>
+                        <h5 class="subtitulo">Termos e Condições de uso para Instituições</h5>
+                        <p>
+                            Seja bem-vindo ao nosso site.<br>
+                            Leia com atenção todos os termos abaixo.<br>
+                            Este documento, e todo o conteúdo do site é oferecido por (PARA SEMEAR)<br>
+                            A permanência no website implica-se automaticamente na leitura e aceitação tácita do
+                            presente termos de uso a seguir.<br>
+
+
+                            1. DA FUNÇÃO DO SITE<br>
+                            Buscamos através da divulgaçao, desenvolvido por profissionais da área, fazer com que as
+                            instituicoes sejam
+                            conhecidas ao alcance de todos, e atraves disso possam receber mas recursos para apliar e
+                            manter seus projetos.<br>
+                            Nesta plataforma, poderá ser realizado tanto a divulgação das instituicoes, suas metas e
+                            areas alcançadas.<br>
+                            Todo o conteúdo presente neste site foi desenvolvido buscando fontes e materiais de
+                            confiabilidade, assim como são baseados
+                            em estudos sérios e respeitados, através de pesquisa de alta nível.<br>
+                            É de responsabilidade da Instituição colocar todas as informações verdadeiras sobre a
+                            mesma.<br>
+
+                            2. DAS OBRIGAÇÕES DA INSTITUIÇAO <br>
+                            A Instituição ao utilizar o website, concorda integralmente em:
+                            De nenhuma forma ou meio realizar qualquer tipo de ação que tente invadir, hacker, destruir
+                            ou prejudicar a estrutura do site,
+                            ou de seus parceiros. Incluindo-se, mas não se limitando, ao envio de vírus de computador,
+                            de ataques de DDOS, de acesso indevido
+                            por falhas da mesma ou quaisquer outras formas e meios.<br>
+                            Da proibição em reproduzir qualquer conteúdo de natureza indevida ou falsa, podendo
+                            responder civil e criminalmente pelo mesmo.
+                            Com a Política de Privacidade do site, assim como tratamos os dados referentes ao cadastro e
+                            visita no site, podendo a qualquer momento e forma,
+                            requerer a exclusão dos mesmos, através do formulário de contato.
+                            De sempre enviar novos conteudos para assim, mantermos atualizado as informaçoes sobre a
+                            mesma para os colaboradores.<br>
+
+                            3. DO ACEITE DOS TERMOS<br>
+                            Este termo especifica e exige que toda Instituição ao acessar o site, leia e compreenda
+                            todas as cláusulas do mesmo,
+                            visto que ele estabelece entre o ParaSemear e a Instituição direitos e obrigações entre
+                            ambas as partes, aceitos expressamente
+                            pela Instituição para realizar o cadastro e permanecer no site.<br>
+                            Ao continuar acessando o site, a Instituição expressa que aceita e entende todas as
+                            cláusulas, assim como concorda integralmente
+                            com cada uma delas, sendo este aceite imprescindível para a permanência na mesma. Caso a
+                            Instituição discorde de alguma cláusula ou
+                            termo deste contrato, o mesmo deve imediatamente interromper sua navegação de todas as
+                            formas e meios.<br>
+                            Este termo pode e irá ser atualizado periodicamente pelo ParaSemear, que se resguarda no
+                            direito de alteração,
+                            com aviso prévio e comunicação pelo o email informado no ato do cadastro. É importante que a
+                            Instituição confira
+                            sempre se houve movimentação e qual foi a última atualização do mesmo no começo da
+                            página.<br><br>
+                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" required>
+                            <label class="form-check-label" for="flexSwitchCheckDefault">Aceito os Termos e Condições de
+                                Uso</label>
+                        </p>
+                    </div>
+                    <script>
+                        function abrirModal() {
+                            const modal = document.getElementById("modal-termo")
+                            modal.classList.add("mostrar")
+
+                            modal.addEventListener("click", (e) => {
+                                if (e.target.id == "modal-termo" || e.target.className == "fechar") {
+                                    modal.classList.remove("mostrar");
+                                }
+                            });
+                        }
+                        function Entrou() {
+                            var x = document.getElementsByClassName("entre");
+                            x[0].innerHTML = "Bem Vindo de Volta!"
+                        }
+                    </script>
+                </div>
+
+                <!--Termo-->
+            </div>
+        </div>
+        <h5>Anexe toda Documentaçao da Instituição e do Responsavel abaixo.</h5>
+        <div id="final">
+            <div class="input-group mb-3 container">
+                <input type="file" class="form-control" id="inputGroupFile02">
+                <label class="input-group-text" for="inputGroupFile02">Upload</label>
+            </div>
+            <button class="btnn btn-light" type="button">Cadastrar</button>
+        </div>
+
+    </form>
+    <!--CONTEUDO-->
+
+    <!--RODAPÉ-->
+    <footer>
+        <div class="navbar justify-content-between ">
+            <div class="col-6 col-sm-5 col-lg-4">
+                <h6 class="tx-cinzae">Centrais de atendimento</h6>
+                <ul class="nav flex-column">
+                    Av. Djalma Batista, 159. Manaus/AM
+                    (92)3456-5555
+
+                </ul>
+            </div>
+        </div>
+        <div>
+            <div class="col-6 col-sm-6 col-lg-6">
+                <form>
+                    <h6>Deixe seu email para receber nossas ofertas!</h6>
+                    <div class="d-flex w-100 gap-8"><br>
+                        <input id="newsletter1" type="text" class="form-control" placeholder="Digite seu email">
+                        <button class="btn btn-light" type="button">Inscrever</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="row">
+            <p class="m-0 text-center">© 2022 Company, Inc. All rights reserved.</p>
+        </div>
+    </footer>
+    <!--RODAPÉ-->
+
+    <!--SCRIPT-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <!--SCRIPT-->
+</body>
+
+</html>
