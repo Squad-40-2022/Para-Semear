@@ -5,13 +5,13 @@ import java.util.Date;
 public class Instituicao {
 
 	private int id;
-	private String cnpj ,razSocial, nomeFant, nomeResp, tel, end, cidade, uf, modalidade, email, senha, doc;
+	private String cnpj ,razSocial, nomeFant, nomeResp, tel, end, cidade, uf, email, senha, doc;
 	
 	public Instituicao() {
 	}
 	
 	public Instituicao(int id, String cnpj, String razSocial, String nomeFant, String nomeResp, String tel, String end,
-			String cidade, String uf, String modalidade, String email, String senha, String doc) {
+			String cidade, String uf, String email, String senha, String doc) {
 		this.id = id;
 		this.cnpj = cnpj;
 		this.razSocial = razSocial;
@@ -21,7 +21,6 @@ public class Instituicao {
 		this.end = end;
 		this.cidade = cidade;
 		this.uf = uf;
-		this.modalidade = modalidade;
 		this.email = email;
 		this.senha = senha;
 		this.doc = doc;
@@ -81,12 +80,7 @@ public class Instituicao {
 	public void setUf(String uf) {
 		this.uf = uf;
 	}
-	public String getModalidade() {
-		return modalidade;
-	}
-	public void setModalidade(String modalidade) {
-		this.modalidade = modalidade;
-	}
+	
 	public String getEmail() {
 		return email;
 	}
