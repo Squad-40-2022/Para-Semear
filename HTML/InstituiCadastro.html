@@ -44,8 +44,6 @@
                     <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         <img src="../IMG/Icon-login.png" alt="">
                     </button>
-
-                    <!-- Modal -->
                     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                         aria-hidden="true">
                         <div class="modal-dialog">
@@ -59,23 +57,6 @@
                         </div>
                     </div>
                 </div>
-                <script>
-                    function abrirModal() {
-                        const modal = document.getElementById("modal-termo")
-                        modal.classList.add("mostrar")
-
-                        modal.addEventListener("click", (e) => {
-                            if (e.target.id == "modal-termo" || e.target.className == "fechar") {
-                                modal.classList.remove("mostrar");
-                            }
-                        });
-                    }
-                    function Entrou() {
-                        var x = document.getElementsByClassName("entre");
-                        x[0].innerHTML = "Bem Vindo de Volta!"
-                    }
-                </script>
-
                 <!--LOGIN-->
             </div>
         </div>
@@ -83,7 +64,6 @@
     <!--BARRA DE NAVEGAÇÃO-->
 
     <!--CONTEUDO-->
-
     <form class="Cadastro">
         <h2>Cadastro da Instituição </h2>
         <div class="container" id="cads">
@@ -126,7 +106,6 @@
                     <input id="doc" type="tel" name="number" placeholder="Digite o Numero" required>
                 </div>
             </div>
-
             <div class="endereço">
                 <h5>Preencha abaixo com o endereço da Instituição</h5>
                 <div class="dados mb-3">
@@ -218,12 +197,29 @@
                             <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" required>
                             <label class="form-check-label" for="flexSwitchCheckDefault">Aceito os Termos e Condições de
                                 Uso</label>
+                        </p>
                     </div>
+                    <script>
+                        function abrirModal() {
+                            const modal = document.getElementById("modal-termo")
+                            modal.classList.add("mostrar")
+
+                            modal.addEventListener("click", (e) => {
+                                if (e.target.id == "modal-termo" || e.target.className == "fechar") {
+                                    modal.classList.remove("mostrar");
+                                }
+                            });
+                        }
+                        function Entrou() {
+                            var x = document.getElementsByClassName("entre");
+                            x[0].innerHTML = "Bem Vindo de Volta!"
+                        }
+                    </script>
                 </div>
+
                 <!--Termo-->
             </div>
         </div>
-
         <h5>Anexe toda Documentaçao da Instituição e do Responsavel abaixo.</h5>
         <div id="final">
             <div class="input-group mb-3 container">

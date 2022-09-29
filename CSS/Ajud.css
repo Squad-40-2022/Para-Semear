@@ -1,0 +1,134 @@
+/*Nav*/
+.main {
+  background-color: #eeeeee;
+  min-height: 70vh;
+}
+header {
+  background-color: #B29272;
+}
+.bt-log {
+  width: 90%;
+  height: 40px;
+  text-align: start;
+  margin-bottom: 5px;
+  color: #1A2915;
+  background-color: white;
+}
+.bt-log:hover {
+  background-color: #B29272;
+}
+.canva {
+  background-color: #DDD3CA;
+  color: #1A2915;
+}
+.conteudo {
+  background-color: white;
+  border-radius: 20px;
+  padding-bottom: 20px;
+}
+*{
+  padding:0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  padding:0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.btn, button {
+  display: inline-block;
+  padding: 10px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  transition: background 800ms ease;
+}
+
+/*Nav*/
+form{
+  padding: 50px;
+}
+h3{
+  color: #041d13;
+  text-align: center;
+}
+label{
+  font-size: 20px;
+  color:#0f291e;
+}
+
+.btnn {
+  background-color: #B29272;
+  padding:5px 5px;
+}
+.dados{
+  padding: 1rem;
+}
+.relato{
+  padding: 1rem;
+}
+
+/*Rodape*/
+footer {
+  display: grid;
+  color: #ffffff;
+  grid-template-columns: auto auto;
+  background-color: #B29272;
+  text-align: center;
+}
+/*Rodape*/
+
+
+/*BARRA DE NAVEGAÇÃO*/
+::-webkit-scrollbar{
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb{
+  background-color: #B29272;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track{
+  background-color: #DDD3CA;
+}
+.bt-log {
+  width: 100%;
+  height: 40px;
+  text-align: start;
+  margin-bottom: 5px;
+  color: #1A2915;
+  background-color: white;
+}
+.bt-log:hover {
+  background-color: #B29272;
+}
+.canva {
+  background-color: #DDD3CA;
+  color: #1A2915;
+}
+.conteudo {
+  background-color: #DDD3CA;
+  border-radius: 20px;
+  padding-bottom: 30px;
+  min-height: calc(100vh - 158px);
+}
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  background-color: #DDD3CA;
+  color: #1A2915;
+}
+.tx {
+  color: #1A2915;
+  text-decoration: none;
+}
+
+/*RODAPE*/
+
+  @media(max-width:900px) {
+   
+    
+}
