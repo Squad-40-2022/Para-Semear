@@ -1,7 +1,6 @@
-package view;
+package crud;
 
-
-public class Semear {
+public class InstituicaoCRUD {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
