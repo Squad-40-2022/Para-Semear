@@ -47,8 +47,8 @@ FOREIGN KEY(id_ins) REFERENCES INSTITUICOES (id_ins)
 );
 
 CREATE TABLE RELATORIO (
-qde_vol INTEGER,
-valor_rell DECIMAL(8,2),
+qtd_vol INTEGER,
+valor_rel DECIMAL(8,2),
 num_cont_rel INTEGER,
 projetos VARCHAR(30),
 id_rel INTEGER PRIMARY KEY auto_increment,
@@ -60,7 +60,7 @@ FOREIGN KEY(id_ins) REFERENCES INSTITUICOES (id_ins)
 );
 
 CREATE TABLE PROJETOS (
-idProjeto INTEGER PRIMARY KEY auto_increment,
+id_pro INTEGER PRIMARY KEY auto_increment,
 nome_proj VARCHAR(30),
 local_proj VARCHAR(100),
 num_cont_proj INTEGER,

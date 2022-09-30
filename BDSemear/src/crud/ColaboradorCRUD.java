@@ -2,10 +2,10 @@ package crud;
 
 import java.util.Scanner;
 
-import CRUD.ClienteCRUD;
+
 import controller.ColaboradorDAO;
 import model.Colaborador;
-import objetos.Cliente;
+
 
 public class ColaboradorCRUD {
 
@@ -32,30 +32,30 @@ public class ColaboradorCRUD {
 			col.setCpf(entrada.nextLine());
 
 			System.out.println("Digite o nome:");
-			cliente.setNome(entrada.nextLine());
+			col.setNome(entrada.nextLine());
 
 			System.out.println("Digite a data de nascimento:(dd/mm/aaaa)");
-			cliente.setDataNasc(entrada.next());
+			col.setDataNasc(entrada.next());
 
 			System.out.println("Digite o genero: (F/M/O(Outros))");
-			cliente.setGenero(entrada.next());
+			col.setGenero(entrada.next());
 
 			System.out.println("Digite o telefone:((DDD) xxxxx-xxxx)");
-			cliente.setTelefone(entrada.next());
+			col.setTelefone(entrada.next());
 
 			System.out.println("Digite o endereço:");
-			cliente.setEndereco(entrada.next());
+			col.setEndereco(entrada.next());
 
 			System.out.println("Digite o UF:");
-			cliente.setUf(entrada.next());
+			col.setUf(entrada.next());
 
 			System.out.println("Digite o email:");
-			cliente.setEmail(entrada.next());
+			col.setEmail(entrada.next());
 
 			System.out.println("Digite a senha:");
-			cliente.setSenha(entrada.next());
+			col.setSenha(entrada.next());
 
-			clienteDAO.save(cliente);
+			clienteDAO.save(col);
 
 			ClienteCRUD.Cliente(args);
 			break;
@@ -66,33 +66,33 @@ public class ColaboradorCRUD {
 			break;
 		case 3:
 			System.out.println("Digite o CPF:(xxx.xxx.xxx-xx)");
-			cliente.setCpf(entrada.nextLine());
+			col.setCpf(entrada.nextLine());
 
 			System.out.println("Digite o nome:");
-			cliente.setNome(entrada.nextLine());
+			col.setNome(entrada.nextLine());
 
 			System.out.println("Digite a data de nascimento:(dd/mm/aaaa)");
-			cliente.setDataNasc(entrada.next());
+			col.setDataNasc(entrada.next());
 
 			System.out.println("Digite o genero: (F/M/O(Outros))");
-			cliente.setGenero(entrada.next());
+			col.setGenero(entrada.next());
 
 			System.out.println("Digite o telefone:((DDD) xxxxx-xxxx)");
-			cliente.setTelefone(entrada.next());
+			col.setTelefone(entrada.next());
 
 			System.out.println("Digite o endereço:");
-			cliente.setEndereco(entrada.next());
+			col.setEndereco(entrada.next());
 
 			System.out.println("Digite o UF:");
-			cliente.setUf(entrada.next());
+			col.setUf(entrada.next());
 
 			System.out.println("Digite o email:");
-			cliente.setEmail(entrada.next());
+			col.setEmail(entrada.next());
 
 			System.out.println("Digite a senha:");
-			cliente.setSenha(entrada.next());
+			col.setSenha(entrada.next());
 
-			clienteDAO.update(cliente);
+			clienteDAO.update(col);
 			ClienteCRUD.Cliente(args);
 			break;
 

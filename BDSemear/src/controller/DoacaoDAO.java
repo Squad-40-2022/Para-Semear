@@ -5,38 +5,42 @@ import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
 import connection.Conexao;
-import model.Cliente;
-import model.Local;
+import model.Doacao;
+import model.Instituicao;
+import model.Colaborador;
 
 public class DoacaoDAO {
 	Connection conn = null;
 	PreparedStatement pstm = null;
 	SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
 
-	public void save(Cliente cliente) {
+	public void save(Doacao doa) {
 
-		String sql = "INSERT INTO cliente(cpf_cli, nome_cli, data_nasc, tel_cli, email, senha, logradouro, id_local)" + " VALUE(?,?,?,?,?,?,?,?)";
-		
+		String sql = "INSERT INTO DOACAO(id_doa, tipo_doa, desc_doa, qt_doa, com_doa, data_doa, anonimo, id_col, id_ins)"
+				+ " VALUE(?,?,?,?,?,?,?,?,?)";
+
 		try {
-			
+
 			conn = Conexao.createConnectionToMySQL();
 			pstm = conn.prepareStatement(sql);
 
-			pstm.setString(1, cliente.getCpf());
-			pstm.setString(2, cliente.getNome());
-			pstm.setDate(3, new Date(formatter.parse(cliente.getNasc()).getTime()));
-			pstm.setString(4, cliente.getTel());
-			pstm.setString(5, cliente.getEmail());
-			pstm.setString(6, cliente.getSenha());
-			pstm.setString(7, cliente.getEnde());
-			pstm.setInt(8, cliente.getLocal().getId());
+			pstm.setInt(1, doa.getId());
+			pstm.setString(2, doa.getTipo());
+			pstm.setString(3, doa.getDescricao());
+			pstm.setDouble(4, doa.getQuantMat());
+			pstm.setString(5, doa.getDocComp());
+			pstm.setDate(6, new Date(0));
+			pstm.setString(7, String.valueOf(doa.getAnonimo()));
+			pstm.setInt(8, doa.getColaborador().getId());
+			pstm.setInt(9, doa.getInstituicao().getId());
 
 			pstm.execute();
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -60,7 +64,7 @@ public class DoacaoDAO {
 
 	public void removeBy(int id) {
 
-		String sql = "DELETE FROM cliente WHERE id_cli=?";
+		String sql = "DELETE FROM doacao WHERE id_doa=?";
 
 		try {
 			conn = Conexao.createConnectionToMySQL();
@@ -89,27 +93,27 @@ public class DoacaoDAO {
 			}
 		}
 	}
-	
-	public void update(Cliente cliente) {
 
-		String sql = "update cliente SET cpf_cli = ?,nome_cli = ?, data_nasc = ?, tel_cli = ?, email = ?, senha = ?, logradouro = ?, id_local = ? where id_cli = ?";
-		
+	public void update(Doacao doa) {
+
+		String sql = "update doacao SET tipo_doa=?  desc_doa=?  qt_doa=?  com_doa=?  data_doa=?  anonimo=?  id_col=?  id_ins=?  where id_doa = ?";
+
 		try {
-			
+
 			conn = Conexao.createConnectionToMySQL();
-			
+
 			pstm = conn.prepareStatement(sql);
 
-			pstm.setString(1, cliente.getCpf());
-			pstm.setString(2, cliente.getNome());
-			pstm.setDate(3, new Date(formatter.parse(cliente.getNasc()).getTime()));
-			pstm.setString(4, cliente.getTel());
-			pstm.setString(5, cliente.getEmail());
-			pstm.setString(6, cliente.getSenha());
-			pstm.setString(7, cliente.getEnde());
-			pstm.setInt(8, cliente.getLocal().getId());
-			pstm.setInt(9, cliente.getId());
-
+			pstm.setString(1, doa.getTipo());
+			pstm.setString(2, doa.getDescricao());
+			pstm.setDouble(3, doa.getQuantMat());
+			pstm.setString(4, doa.getDocComp());
+			pstm.setDate(5, new Date(0));
+			pstm.setString(6, String.valueOf(doa.getAnonimo()));
+			pstm.setInt(7, doa.getColaborador().getId());
+			pstm.setInt(8, doa.getInstituicao().getId());
+			pstm.setInt(9, doa.getId());
+			
 			pstm.execute();
 
 		} catch (Exception e) {
@@ -133,11 +137,11 @@ public class DoacaoDAO {
 
 	}
 
-	public List<Cliente> getClientes() {
+	public List<Doacao> getDoacoes() {
 
-		String sql = "SELECT * FROM cliente_local";
+		String sql = "SELECT * FROM doacao_instituicoes_colaboradores";
 
-		List<Cliente> clientes = new ArrayList<Cliente>();
+		List<Doacao> doacoes = new ArrayList<Doacao>();
 
 		ResultSet rset = null;
 
@@ -150,24 +154,25 @@ public class DoacaoDAO {
 
 			while (rset.next()) {
 
-				Cliente cli = new Cliente();
-				Local local = new Local();
-				
-				cli.setId(rset.getInt("id_cli"));
-				cli.setCpf(rset.getString("cpf_cli"));
-				cli.setNome(rset.getString("nome_cli"));
-				cli.setTel(rset.getString("tel_cli"));
-				cli.setSenha(rset.getString("senha"));
-				cli.setEmail(rset.getString("email"));
-				cli.setEnde(rset.getString("logradouro"));
-				cli.setNasc(formatter.format(rset.getDate("data_nasc")));
-				
-				local.setId(rset.getInt("id_local"));
-				local.setCidade(rset.getString("cidade"));
-				local.setUf(rset.getString("uf"));
-				cli.setLocal(local);
+				Colaborador col = new Colaborador();
+				Instituicao ins = new Instituicao();
+				Doacao doa = new Doacao();
 
-				clientes.add(cli);
+				doa.setId(rset.getInt("id_doa"));
+				doa.setTipo(rset.getString("tipo_doa"));
+				doa.setDescricao(rset.getString("desc_doa"));
+				doa.setDocComp(rset.getString("com_doa"));
+				doa.setData(rset.getDate("data_doa"));
+				doa.setQuantMat(rset.getInt("qt_doa"));
+				doa.setAnonimo(rset.getString("anonimo").charAt(0));
+				
+				ins.setId(rset.getInt("id_ins"));
+				col.setId(rset.getInt("id_col"));
+				col.setNome(rset.getString("nome_col"));
+				doa.setInstituicao(ins);
+				doa.setColaborador(col);
+
+				doacoes.add(doa);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -186,17 +191,18 @@ public class DoacaoDAO {
 				e.printStackTrace();
 			}
 		}
-		return clientes;
+		return doacoes;
 	}
 
-	public Cliente cliById(int id) {
+	public Doacao doaById(int id) {
 
-		String sql = "SELECT * FROM cliente_local WHERE id_cli=?";
+		String sql = "SELECT * FROM doacao_colaboradores_instituicoes WHERE id_doa=?";
 
 		ResultSet rset = null;
 
-		Cliente cli = new Cliente();
-		Local local = new Local();
+		Colaborador col = new Colaborador();
+		Instituicao ins = new Instituicao();
+		Doacao doa = new Doacao();
 
 		try {
 			conn = Conexao.createConnectionToMySQL();
@@ -206,19 +212,19 @@ public class DoacaoDAO {
 
 			rset.next();
 
-			cli.setId(rset.getInt("id_cli"));
-			cli.setCpf(rset.getString("cpf_cli"));
-			cli.setNome(rset.getString("nome_cli"));
-			cli.setTel(rset.getString("tel_cli"));
-			cli.setSenha(rset.getString("senha"));
-			cli.setEmail(rset.getString("email"));
-			cli.setEnde(rset.getString("logradouro"));
-			cli.setNasc(formatter.format(rset.getDate("data_nasc")));
+			doa.setId(rset.getInt("id_doa"));
+			doa.setTipo(rset.getString("tipo_doa"));
+			doa.setDescricao(rset.getString("desc_doa"));
+			doa.setDocComp(rset.getString("com_doa"));
+			doa.setData(rset.getDate("data_doa"));
+			doa.setQuantMat(rset.getInt("qt_doa"));
+			doa.setAnonimo(rset.getString("anonimo").charAt(0));
 			
-			local.setId(rset.getInt("id_local"));
-			local.setCidade(rset.getString("cidade"));
-			local.setUf(rset.getString("uf"));
-			cli.setLocal(local);
+			ins.setId(rset.getInt("id_ins"));
+			col.setId(rset.getInt("id_col"));
+			col.setNome(rset.getString("nome_col"));
+			doa.setInstituicao(ins);
+			doa.setColaborador(col);
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -237,6 +243,6 @@ public class DoacaoDAO {
 				e.printStackTrace();
 			}
 		}
-		return cli;
+		return doa;
 	}
 }

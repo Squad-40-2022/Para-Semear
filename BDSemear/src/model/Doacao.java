@@ -1,5 +1,6 @@
 package model;
 
+
 import java.time.LocalDate;
 
 public class Doacao {
@@ -55,8 +56,8 @@ public class Doacao {
 	public LocalDate getData() {
 		return data;
 	}
-	public void setData(LocalDate data) {
-		this.data = data;
+	public void setData(LocalDate date) {
+		this.data = date;
 	}
 	public double getQuantMat() {
 		return quantMat;
@@ -82,6 +83,8 @@ public class Doacao {
 	public void setInstituicao(Instituicao instituicao) {
 		this.instituicao = instituicao;
 	}
+
+	
 	
 	
 	

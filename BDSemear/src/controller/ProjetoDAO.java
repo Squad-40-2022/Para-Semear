@@ -9,31 +9,30 @@ import java.util.ArrayList;
 import java.util.List;
 
 import connection.Conexao;
-import model.Cliente;
-import model.Local;
+import model.Projeto;
+import model.Instituicao;
 
 public class ProjetoDAO {
 	Connection conn = null;
 	PreparedStatement pstm = null;
 	SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
 
-	public void save(Cliente cliente) {
+	public void save(Projeto pro) {
 
-		String sql = "INSERT INTO cliente(cpf_cli, nome_cli, data_nasc, tel_cli, email, senha, logradouro, id_local)" + " VALUE(?,?,?,?,?,?,?,?)";
-		
+		String sql = "INSERT INTO projetos (nome_proj, local_proj, num_cont_proj, sit_proj, freq_proj, desc_proj, id_ins)" + " VALUE(?,?,?,?,?,?,?)";
+
 		try {
 			
 			conn = Conexao.createConnectionToMySQL();
 			pstm = conn.prepareStatement(sql);
 
-			pstm.setString(1, cliente.getCpf());
-			pstm.setString(2, cliente.getNome());
-			pstm.setDate(3, new Date(formatter.parse(cliente.getNasc()).getTime()));
-			pstm.setString(4, cliente.getTel());
-			pstm.setString(5, cliente.getEmail());
-			pstm.setString(6, cliente.getSenha());
-			pstm.setString(7, cliente.getEnde());
-			pstm.setInt(8, cliente.getLocal().getId());
+			pstm.setString(1, pro.getNome());
+			pstm.setString(2, pro.getLocal());
+			pstm.setInt(3, pro.getNumCont());
+			pstm.setString(4, String.valueOf(pro.getSituacao()));
+			pstm.setString(5, pro.getFrequencia());
+			pstm.setString(6, pro.getDescricao());
+			pstm.setInt(7, pro.getInstituicao().getId());
 
 			pstm.execute();
 			
@@ -60,7 +59,7 @@ public class ProjetoDAO {
 
 	public void removeBy(int id) {
 
-		String sql = "DELETE FROM cliente WHERE id_cli=?";
+		String sql = "DELETE FROM projetos WHERE id_pro=?";
 
 		try {
 			conn = Conexao.createConnectionToMySQL();
@@ -90,9 +89,9 @@ public class ProjetoDAO {
 		}
 	}
 	
-	public void update(Cliente cliente) {
+	public void update(Projeto pro) {
 
-		String sql = "update cliente SET cpf_cli = ?,nome_cli = ?, data_nasc = ?, tel_cli = ?, email = ?, senha = ?, logradouro = ?, id_local = ? where id_cli = ?";
+		String sql = "update projetos SET nome_proj = ?, local_proj = ?, num_cont_proj = ?, sit_proj = ?, freq_proj = ?, desc_proj = ?, id_ins = ? where id_pro = ?";
 		
 		try {
 			
@@ -100,15 +99,14 @@ public class ProjetoDAO {
 			
 			pstm = conn.prepareStatement(sql);
 
-			pstm.setString(1, cliente.getCpf());
-			pstm.setString(2, cliente.getNome());
-			pstm.setDate(3, new Date(formatter.parse(cliente.getNasc()).getTime()));
-			pstm.setString(4, cliente.getTel());
-			pstm.setString(5, cliente.getEmail());
-			pstm.setString(6, cliente.getSenha());
-			pstm.setString(7, cliente.getEnde());
-			pstm.setInt(8, cliente.getLocal().getId());
-			pstm.setInt(9, cliente.getId());
+			pstm.setString(1, pro.getNome());
+			pstm.setString(2, pro.getLocal());
+			pstm.setInt(3, pro.getNumCont());
+			pstm.setString(4, String.valueOf(pro.getSituacao()));
+			pstm.setString(5, pro.getFrequencia());
+			pstm.setString(6, pro.getDescricao());
+			pstm.setInt(7, pro.getInstituicao().getId());
+			pstm.setInt(8, pro.getId());
 
 			pstm.execute();
 
@@ -133,11 +131,11 @@ public class ProjetoDAO {
 
 	}
 
-	public List<Cliente> getClientes() {
+	public List<Projeto> getProjetos() {
 
-		String sql = "SELECT * FROM cliente_local";
+		String sql = "SELECT * FROM projetos";
 
-		List<Cliente> clientes = new ArrayList<Cliente>();
+		List<Projeto> projetos = new ArrayList<Projeto>();
 
 		ResultSet rset = null;
 
@@ -150,24 +148,21 @@ public class ProjetoDAO {
 
 			while (rset.next()) {
 
-				Cliente cli = new Cliente();
-				Local local = new Local();
+				Projeto pro = new Projeto();
+				Instituicao ins = new Instituicao();
 				
-				cli.setId(rset.getInt("id_cli"));
-				cli.setCpf(rset.getString("cpf_cli"));
-				cli.setNome(rset.getString("nome_cli"));
-				cli.setTel(rset.getString("tel_cli"));
-				cli.setSenha(rset.getString("senha"));
-				cli.setEmail(rset.getString("email"));
-				cli.setEnde(rset.getString("logradouro"));
-				cli.setNasc(formatter.format(rset.getDate("data_nasc")));
-				
-				local.setId(rset.getInt("id_local"));
-				local.setCidade(rset.getString("cidade"));
-				local.setUf(rset.getString("uf"));
-				cli.setLocal(local);
+				pro.setId(rset.getInt("id_pro"));
+				pro.setNumCont(rset.getInt("num_cont_proj"));
+				pro.setNome(rset.getString("nome_proj"));
+				pro.setLocal(rset.getString("local_proj"));
+				pro.setFrequencia(rset.getString("freq_proj"));
+				pro.setDescricao(rset.getString("desc_proj"));
+				pro.setSituacao(rset.getString("sit_proj").charAt(0));
 
-				clientes.add(cli);
+				ins.getId(rset.getInt("id_ins"));
+				pro.getInstituicao(ins);
+
+				projetos.add(pro);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -186,17 +181,17 @@ public class ProjetoDAO {
 				e.printStackTrace();
 			}
 		}
-		return clientes;
+		return projetos;
 	}
 
-	public Cliente cliById(int id) {
+	public Projeto proById(int id) {
 
-		String sql = "SELECT * FROM cliente_local WHERE id_cli=?";
+		String sql = "SELECT * FROM projetos WHERE id_pro=?";
 
 		ResultSet rset = null;
 
-		Cliente cli = new Cliente();
-		Local local = new Local();
+		Projeto pro = new Projeto();
+		Instituicao ins = new Instituicao();
 
 		try {
 			conn = Conexao.createConnectionToMySQL();
@@ -206,19 +201,16 @@ public class ProjetoDAO {
 
 			rset.next();
 
-			cli.setId(rset.getInt("id_cli"));
-			cli.setCpf(rset.getString("cpf_cli"));
-			cli.setNome(rset.getString("nome_cli"));
-			cli.setTel(rset.getString("tel_cli"));
-			cli.setSenha(rset.getString("senha"));
-			cli.setEmail(rset.getString("email"));
-			cli.setEnde(rset.getString("logradouro"));
-			cli.setNasc(formatter.format(rset.getDate("data_nasc")));
-			
-			local.setId(rset.getInt("id_local"));
-			local.setCidade(rset.getString("cidade"));
-			local.setUf(rset.getString("uf"));
-			cli.setLocal(local);
+			pro.setId(rset.getInt("id_pro"));
+			pro.setNumCont(rset.getInt("num_cont_proj"));
+			pro.setNome(rset.getString("nome_proj"));
+			pro.setLocal(rset.getString("local_proj"));
+			pro.setFrequencia(rset.getString("freq_proj"));
+			pro.setDescricao(rset.getString("desc_proj"));
+			pro.setSituacao(rset.getString("sit_proj").charAt(0));
+
+			ins.getId(rset.getInt("id_ins"));
+			pro.getInstituicao(ins);
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -237,6 +229,6 @@ public class ProjetoDAO {
 				e.printStackTrace();
 			}
 		}
-		return cli;
+		return pro;
 	}
 }
