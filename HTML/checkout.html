@@ -37,9 +37,6 @@
                                 <li class="nav-item">
                                     <a class="nav-link text-white" href="../HTML/instituicoes.html">Instituições</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-white" href="/HTML/ajuda.html">Instituições</a>
-                                </li>
                             </ul>
                         </div>
                     </nav>
@@ -75,45 +72,8 @@
 
             <div class="col">
 
-                <h3 class="title">Checkout para a doação</h3>
+                <h3 class="title">Tipo de doação:</h3>
 
-                <div class="inputBox">
-                    <span>Nome completo:</span>
-                    <input type="text" placeholder="João Augusto">
-                </div>
-                <div class="inputBox">
-                    <span>Email :</span>
-                    <input type="email" placeholder="exemplo@exemplo.com">
-                </div>
-                <div class="inputBox">
-                    <span>Endereço :</span>
-                    <input type="text" placeholder="Localidade">
-                </div>
-                <div class="inputBox">
-                    <span>Cidade :</span>
-                    <input type="text" placeholder="Rio de Janeiro">
-                </div>
-
-                <div class="flex">
-                    <div class="inputBox">
-                        <span>Estado :</span>
-                        <input type="text" placeholder="RJ">
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="col">
-
-                
-
-            
-                <div class="inputBox">
-                    <span>Número de contato :</span>
-                    <input type="number" placeholder="+55 43 22222 4444">
-                </div>
-                
-                <h6 class="title">TIPO DE DOAÇÃO:</h6>
                 <div class="inputBox">
                     <label for="horns">Dinheiro:</label>
                     <input type="checkbox" id="horns" name="horns">
@@ -123,33 +83,74 @@
                 <div class="inputBox">
                     <label for="horns">Outros:</label>
                     <input type="checkbox" id="horns" name="horns">
-                    <input type="text" placeholder="descreva a doação">
-        
                 </div> 
-                  
+                
+                <h6>Descreva sua doação:</h6>
+                <textarea name="Decrição" id="descri_doacao" cols="30" rows="5"></textarea>
+          
+                <h6>Qual ONG?</h6>
+               <div class="inputBox">
+                <select name="ONG" id="doacao_ong_select">
+                    <option value="ACMT">ACMT</option>
+                    <option value="#">Lorem</option>
+                    <option value="#">Lorem</option>
+                </select>
+               </div>
+            </div>
+
+            <div class="col">
+
+                
+
+            
+                <!-- <div class="inputBox">
+                    <span>Número de contato :</span>
+                    <input type="number" placeholder="+55 43 22222 4444">
+                </div> -->
+
+                <h6 class="title">Doação anônima?</h6>
+
+                <div class="inputBox">
+                    <label for="horns">Sim:</label>
+                    <input type="checkbox" id="horns" name="horns">
+        
+                </div>     
+    
+                <div class="inputBox">
+                    <label for="horns">Não:</label>
+                    <input type="checkbox" id="horns" name="horns">
+                </div> 
 
                 <div class="flex">
                     <div class="inputBox">
-                        <span>escrever :</span>
-                        <input type="number" placeholder="2022">
+                        <span>quantidade</span>
+                        <input type="number" placeholder="5">
                     </div>
                     <div class="inputBox">
-                        <span>escrever:</span>
-                        <input type="text" placeholder="1234">
+                        <span>Data</span>
+                        <input type="datetime" placeholder="10/2/2022">
                     </div>
                 </div>
                       
                 <h6>Ao prosseguir você concorda que sua solicitação de doação será direcionada para o site da ong e seus dados armazenados aqui
                     serão apenas para o retorno dos gastos feitos através de recibos.
                 </h6>
+                <input type="checkbox" id="horns" name="horns">
             </div>
     
         </div>
 
-        <input type="submit" value="Prosseguir com o Checkout" class="submit-btn">
+        <!--
 
+        <a href="/Para-Semear-main/index.html">
+        <input type="submit" value="Prosseguir com o Checkout" class="submit-btn">
+        </a>
+        -->
     </form>
 
+    <!-- mudar dps o link para o css, está bugado, mas o tempo de entrega é curto -->
+    <a href="#"><button style="background: #d89959; border-radius: 10px; padding: 15px; cursor: pointer; color: #fff; border: none; font-size: 16px;">Prosseguir com a doação</button></a>
+   
 </div>    
     
        
