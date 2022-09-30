@@ -1,43 +1,40 @@
 package controller;
 
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
 import connection.Conexao;
-import model.Cliente;
-import model.Local;
+import model.Instituicao;
 import model.Relatorio;
 
 public class RelatorioDAO {
 	Connection conn = null;
 	PreparedStatement pstm = null;
-	SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
 
 	public void save(Relatorio rel) {
 
-		String sql = "INSERT INTO relatorio (cpf_cli, nome_cli, data_nasc, tel_cli, email, senha, logradouro, id_local)" + " VALUE(?,?,?,?,?,?,?,?)";
-		
+		String sql = "INSERT INTO relatorio (ano_rel, mes_rel, projetos, mat_use_rel, valor_rel, num_cont_rel, qtd_vol, id_ins)"
+				+ " VALUE(?,?,?,?,?,?,?,?)";
+
 		try {
-			
+
 			conn = Conexao.createConnectionToMySQL();
 			pstm = conn.prepareStatement(sql);
 
-			pstm.setString(1, cliente.getCpf());
-			pstm.setString(2, cliente.getNome());
-			pstm.setDate(3, new Date(formatter.parse(cliente.getNasc()).getTime()));
-			pstm.setString(4, cliente.getTel());
-			pstm.setString(5, cliente.getEmail());
-			pstm.setString(6, cliente.getSenha());
-			pstm.setString(7, cliente.getEnde());
-			pstm.setInt(8, cliente.getLocal().getId());
+			pstm.setInt(1, rel.getAno());
+			pstm.setInt(2, rel.getMes());
+			pstm.setString(3, rel.getProjetos());
+			pstm.setString(4, rel.getMatUsado());
+			pstm.setDouble(5, rel.getValor());
+			pstm.setInt(6, rel.getNumCont());
+			pstm.setInt(7, rel.getQdeVol());
+			pstm.setInt(8, rel.getInstituicao().getId());
 
 			pstm.execute();
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -61,7 +58,7 @@ public class RelatorioDAO {
 
 	public void removeBy(int id) {
 
-		String sql = "DELETE FROM cliente WHERE id_cli=?";
+		String sql = "DELETE FROM relatorio WHERE id_rel=?";
 
 		try {
 			conn = Conexao.createConnectionToMySQL();
@@ -90,26 +87,26 @@ public class RelatorioDAO {
 			}
 		}
 	}
-	
-	public void update(Cliente cliente) {
 
-		String sql = "update cliente SET cpf_cli = ?,nome_cli = ?, data_nasc = ?, tel_cli = ?, email = ?, senha = ?, logradouro = ?, id_local = ? where id_cli = ?";
-		
+	public void update(Relatorio rel) {
+
+		String sql = "update cliente SET ano_rel = ?, mes_rel = ?, projetos = ?, mat_use_rel = ?, valor_rel = ?, num_cont_rel = ?, qtd_vol = ?, id_ins = ? where id_rel = ?";
+
 		try {
-			
+
 			conn = Conexao.createConnectionToMySQL();
-			
+
 			pstm = conn.prepareStatement(sql);
 
-			pstm.setString(1, cliente.getCpf());
-			pstm.setString(2, cliente.getNome());
-			pstm.setDate(3, new Date(formatter.parse(cliente.getNasc()).getTime()));
-			pstm.setString(4, cliente.getTel());
-			pstm.setString(5, cliente.getEmail());
-			pstm.setString(6, cliente.getSenha());
-			pstm.setString(7, cliente.getEnde());
-			pstm.setInt(8, cliente.getLocal().getId());
-			pstm.setInt(9, cliente.getId());
+			pstm.setInt(1, rel.getAno());
+			pstm.setInt(2, rel.getMes());
+			pstm.setString(3, rel.getProjetos());
+			pstm.setString(4, rel.getMatUsado());
+			pstm.setDouble(5, rel.getValor());
+			pstm.setInt(6, rel.getNumCont());
+			pstm.setInt(7, rel.getQdeVol());
+			pstm.setInt(8, rel.getInstituicao().getId());
+			pstm.setInt(9, rel.getId());
 
 			pstm.execute();
 
@@ -134,11 +131,11 @@ public class RelatorioDAO {
 
 	}
 
-	public List<Cliente> getClientes() {
+	public List<Relatorio> getRelatorios() {
 
-		String sql = "SELECT * FROM cliente_local";
+		String sql = "SELECT * FROM relatorio";
 
-		List<Cliente> clientes = new ArrayList<Cliente>();
+		List<Relatorio> relatorios = new ArrayList<Relatorio>();
 
 		ResultSet rset = null;
 
@@ -151,24 +148,21 @@ public class RelatorioDAO {
 
 			while (rset.next()) {
 
-				Cliente cli = new Cliente();
-				Local local = new Local();
-				
-				cli.setId(rset.getInt("id_cli"));
-				cli.setCpf(rset.getString("cpf_cli"));
-				cli.setNome(rset.getString("nome_cli"));
-				cli.setTel(rset.getString("tel_cli"));
-				cli.setSenha(rset.getString("senha"));
-				cli.setEmail(rset.getString("email"));
-				cli.setEnde(rset.getString("logradouro"));
-				cli.setNasc(formatter.format(rset.getDate("data_nasc")));
-				
-				local.setId(rset.getInt("id_local"));
-				local.setCidade(rset.getString("cidade"));
-				local.setUf(rset.getString("uf"));
-				cli.setLocal(local);
+				Relatorio rel = new Relatorio();
+				Instituicao ins = new Instituicao();
 
-				clientes.add(cli);
+				rel.setId(rset.getInt("id_rel"));
+				rel.setAno(rset.getInt("ano_rel"));
+				rel.setMes(rset.getInt("mes_rel"));
+				rel.setProjetos(rset.getString("projetos"));
+				rel.setMatUsado(rset.getString("mat_use_rel"));
+				rel.setValor(rset.getDouble("valor_rel"));
+				rel.setNumCont(rset.getInt("num_cont_rel"));
+				rel.setQdeVol(rset.getInt("qtd_vol"));
+				ins.setId(rset.getInt("id_ins"));
+				rel.setInstituicao(ins);
+
+				relatorios.add(rel);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -187,17 +181,17 @@ public class RelatorioDAO {
 				e.printStackTrace();
 			}
 		}
-		return clientes;
+		return relatorios;
 	}
 
-	public Cliente cliById(int id) {
+	public Relatorio relById(int id) {
 
-		String sql = "SELECT * FROM cliente_local WHERE id_cli=?";
+		String sql = "SELECT * FROM relatorio WHERE id_rel=?";
 
 		ResultSet rset = null;
 
-		Cliente cli = new Cliente();
-		Local local = new Local();
+		Relatorio rel = new Relatorio();
+		Instituicao ins = new Instituicao();
 
 		try {
 			conn = Conexao.createConnectionToMySQL();
@@ -207,19 +201,16 @@ public class RelatorioDAO {
 
 			rset.next();
 
-			cli.setId(rset.getInt("id_cli"));
-			cli.setCpf(rset.getString("cpf_cli"));
-			cli.setNome(rset.getString("nome_cli"));
-			cli.setTel(rset.getString("tel_cli"));
-			cli.setSenha(rset.getString("senha"));
-			cli.setEmail(rset.getString("email"));
-			cli.setEnde(rset.getString("logradouro"));
-			cli.setNasc(formatter.format(rset.getDate("data_nasc")));
-			
-			local.setId(rset.getInt("id_local"));
-			local.setCidade(rset.getString("cidade"));
-			local.setUf(rset.getString("uf"));
-			cli.setLocal(local);
+			rel.setId(rset.getInt("id_rel"));
+			rel.setAno(rset.getInt("ano_rel"));
+			rel.setMes(rset.getInt("mes_rel"));
+			rel.setProjetos(rset.getString("projetos"));
+			rel.setMatUsado(rset.getString("mat_use_rel"));
+			rel.setValor(rset.getDouble("valor_rel"));
+			rel.setNumCont(rset.getInt("num_cont_rel"));
+			rel.setQdeVol(rset.getInt("qtd_vol"));
+			ins.setId(rset.getInt("id_ins"));
+			rel.setInstituicao(ins);
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -238,6 +229,6 @@ public class RelatorioDAO {
 				e.printStackTrace();
 			}
 		}
-		return cli;
+		return rel;
 	}
 }
