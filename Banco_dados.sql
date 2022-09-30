@@ -60,7 +60,7 @@ FOREIGN KEY(id_ins) REFERENCES INSTITUICOES (id_ins)
 );
 
 CREATE TABLE PROJETOS (
-idProjeto INTEGER PRIMARY KEY auto_increment,
+id_pro INTEGER PRIMARY KEY auto_increment,
 nome_proj VARCHAR(30),
 local_proj VARCHAR(100),
 num_cont_proj INTEGER,
