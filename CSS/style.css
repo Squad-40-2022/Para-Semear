@@ -1,6 +1,6 @@
 .main {
     background-color: #eeeeee;
-    min-height: 100vh;
+    min-height: 90vh;
 }
 
 /*CABEÇALHO*/
@@ -38,9 +38,6 @@ header {
     height: calc(100vh - 110px);
 }
 
-.bloco02{
-    height: 100vh;
-}
 .texto-slide{
     position: absolute;
 }
@@ -70,7 +67,9 @@ header {
     text-decoration: none;
     border-radius: 30px;
 }
-
+h2{
+    font-size: 3rem;
+}
 .tx-pg{
     background-color: rgba(255, 255, 255, 0.5);
     color: #533d27;
@@ -89,11 +88,14 @@ header {
 }
 /*CONTEUDO*/
 
+/*Rodape*/
 footer {
-    padding: 20px;
+    display: grid;
+    color: #ffffff;
     background-color: #B29272;
-    color: #ffffff;    
-}
+    text-align: center;
+  }
+  /*Rodape*/
 
 
 /*BARRA DE NAVEGAÇÃO*/
@@ -110,7 +112,13 @@ footer {
 ::-webkit-scrollbar-track {
     background-color: #DDD3CA;
 }
-
+@media(max-width:900px) {
+    .bloco01{
+        padding: 1rem;
+    }h2{
+        font-size: 2rem;
+    }
+}
 /*BARRA DE NAVEGAÇÃO*/
 
 /* PALETA DE CORES
