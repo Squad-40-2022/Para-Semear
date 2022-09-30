@@ -11,15 +11,16 @@ import java.util.List;
 import connection.Conexao;
 import model.Cliente;
 import model.Local;
+import model.Relatorio;
 
 public class RelatorioDAO {
 	Connection conn = null;
 	PreparedStatement pstm = null;
 	SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
 
-	public void save(Cliente cliente) {
+	public void save(Relatorio rel) {
 
-		String sql = "INSERT INTO cliente(cpf_cli, nome_cli, data_nasc, tel_cli, email, senha, logradouro, id_local)" + " VALUE(?,?,?,?,?,?,?,?)";
+		String sql = "INSERT INTO relatorio (cpf_cli, nome_cli, data_nasc, tel_cli, email, senha, logradouro, id_local)" + " VALUE(?,?,?,?,?,?,?,?)";
 		
 		try {
 			

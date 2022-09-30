@@ -5,14 +5,13 @@ import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
 import connection.Conexao;
+import model.Colaborador;
 import model.Doacao;
 import model.Instituicao;
-import model.Colaborador;
 
 public class DoacaoDAO {
 	Connection conn = null;
@@ -34,7 +33,7 @@ public class DoacaoDAO {
 			pstm.setString(3, doa.getDescricao());
 			pstm.setDouble(4, doa.getQuantMat());
 			pstm.setString(5, doa.getDocComp());
-			pstm.setDate(6, new Date(0));
+			pstm.setDate(6, new Date(formatter.parse(doa.getData()).getTime()));
 			pstm.setString(7, String.valueOf(doa.getAnonimo()));
 			pstm.setInt(8, doa.getColaborador().getId());
 			pstm.setInt(9, doa.getInstituicao().getId());
@@ -108,12 +107,12 @@ public class DoacaoDAO {
 			pstm.setString(2, doa.getDescricao());
 			pstm.setDouble(3, doa.getQuantMat());
 			pstm.setString(4, doa.getDocComp());
-			pstm.setDate(5, new Date(0));
+			pstm.setDate(5, new Date(formatter.parse(doa.getData()).getTime()));
 			pstm.setString(6, String.valueOf(doa.getAnonimo()));
 			pstm.setInt(7, doa.getColaborador().getId());
 			pstm.setInt(8, doa.getInstituicao().getId());
 			pstm.setInt(9, doa.getId());
-			
+
 			pstm.execute();
 
 		} catch (Exception e) {
@@ -162,10 +161,10 @@ public class DoacaoDAO {
 				doa.setTipo(rset.getString("tipo_doa"));
 				doa.setDescricao(rset.getString("desc_doa"));
 				doa.setDocComp(rset.getString("com_doa"));
-				doa.setData(rset.getDate("data_doa"));
+				doa.setData(formatter.format(rset.getDate("data_doa")));
 				doa.setQuantMat(rset.getInt("qt_doa"));
 				doa.setAnonimo(rset.getString("anonimo").charAt(0));
-				
+
 				ins.setId(rset.getInt("id_ins"));
 				col.setId(rset.getInt("id_col"));
 				col.setNome(rset.getString("nome_col"));
@@ -216,10 +215,10 @@ public class DoacaoDAO {
 			doa.setTipo(rset.getString("tipo_doa"));
 			doa.setDescricao(rset.getString("desc_doa"));
 			doa.setDocComp(rset.getString("com_doa"));
-			doa.setData(rset.getDate("data_doa"));
+			doa.setData(formatter.format(rset.getDate("data_doa")));
 			doa.setQuantMat(rset.getInt("qt_doa"));
 			doa.setAnonimo(rset.getString("anonimo").charAt(0));
-			
+
 			ins.setId(rset.getInt("id_ins"));
 			col.setId(rset.getInt("id_col"));
 			col.setNome(rset.getString("nome_col"));

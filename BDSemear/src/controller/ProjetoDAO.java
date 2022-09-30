@@ -1,7 +1,6 @@
 package controller;
 
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.text.SimpleDateFormat;
@@ -9,8 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import connection.Conexao;
-import model.Projeto;
 import model.Instituicao;
+import model.Projeto;
 
 public class ProjetoDAO {
 	Connection conn = null;
@@ -159,8 +158,8 @@ public class ProjetoDAO {
 				pro.setDescricao(rset.getString("desc_proj"));
 				pro.setSituacao(rset.getString("sit_proj").charAt(0));
 
-				ins.getId(rset.getInt("id_ins"));
-				pro.getInstituicao(ins);
+				ins.setId((rset.getInt("id_ins")));
+				pro.setInstituicao(ins);
 
 				projetos.add(pro);
 			}
@@ -209,8 +208,8 @@ public class ProjetoDAO {
 			pro.setDescricao(rset.getString("desc_proj"));
 			pro.setSituacao(rset.getString("sit_proj").charAt(0));
 
-			ins.getId(rset.getInt("id_ins"));
-			pro.getInstituicao(ins);
+			ins.setId((rset.getInt("id_ins")));
+			pro.setInstituicao(ins);
 
 		} catch (Exception e) {
 			e.printStackTrace();
