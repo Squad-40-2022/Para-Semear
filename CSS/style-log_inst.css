@@ -76,7 +76,6 @@ article{
     border-radius: 20px;
     padding: 20px;
 }
-
 .coment-form{
     width: 100%;
     height: 50px;
@@ -84,6 +83,15 @@ article{
     padding: 10px;
 }
 
+.btnn{
+    background-color: #B29272;
+    padding:3px 3px;
+    font-size: 1rem;
+    color: black;
+}
+.pop{
+    padding: 10px;
+}
 @media screen  and (max-width: 1200px){
 aside{
     display: none;
