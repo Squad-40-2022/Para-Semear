@@ -29,7 +29,7 @@ public class ColaboradorCRUD {
 		switch (menu) {
 		case 1:
 			System.out.println("Digite o CPF:(xxx.xxx.xxx-xx)");
-			cliente.setCpf(entrada.nextLine());
+			col.setCpf(entrada.nextLine());
 
 			System.out.println("Digite o nome:");
 			cliente.setNome(entrada.nextLine());
