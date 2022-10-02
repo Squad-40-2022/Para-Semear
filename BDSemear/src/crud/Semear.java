@@ -17,7 +17,7 @@ public class Semear {
 		menu = entrada.nextInt();
 		switch (menu) {
 		case 1:
-			ColaboradorCRUD.main(args);
+			ColaboradorCRUD.Colaborador(args);
 			break;
 		case 2:
 			InstituicaoCRUD.main(args);
