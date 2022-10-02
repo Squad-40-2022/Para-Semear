@@ -22,6 +22,10 @@ public class InstituicaoCRUD {
 		System.out.println("3 - Atualizar instituição");
 		System.out.println("4 - Mostrar instituição");
 		System.out.println("5 - Buscar instituição por ID");
+		//System.out.println("5 - Buscar instituição por nome");
+		//System.out.println("5 - Buscar instituição por cidade");
+		//System.out.println("5 - Buscar instituição por uf");
+		//System.out.println("5 - Buscar voluntarios");
 		System.out.println("6 - Projetos");
 		System.out.println("7 - Relatorios");
 		System.out.println("0 - Voltar");
@@ -154,6 +158,6 @@ public class InstituicaoCRUD {
 			break;
 
 	}
-
+		entrada.close();
 }
 }

@@ -30,6 +30,6 @@ public class Semear {
 			Semear.main(args);
 			
 		}
+		entrada.close();
 	}
-
 }

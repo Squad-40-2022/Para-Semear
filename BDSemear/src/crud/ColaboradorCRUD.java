@@ -157,5 +157,6 @@ public class ColaboradorCRUD {
 			break;
 
 		}
+		entrada.close();
 	}
 }
