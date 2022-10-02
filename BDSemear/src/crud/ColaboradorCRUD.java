@@ -9,7 +9,7 @@ import model.Colaborador;
 
 public class ColaboradorCRUD {
 
-	public static void main(String[] args) {
+	public static void Colaborador(String[] args) {
 		Scanner entrada = new Scanner(System.in);
 		ColaboradorDAO colaboradorDAO = new ColaboradorDAO();
 
@@ -29,40 +29,50 @@ public class ColaboradorCRUD {
 		switch (menu) {
 		case 1:
 			System.out.println("Digite o CPF:(xxx.xxx.xxx-xx)");
-			col.setCpf(entrada.nextLine());
+			col.setCpfOrCnpj(entrada.nextLine());
 
 			System.out.println("Digite o nome:");
 			col.setNome(entrada.nextLine());
 
-			System.out.println("Digite a data de nascimento:(dd/mm/aaaa)");
-			col.setDataNasc(entrada.next());
-
+			System.out.println("Digite o Sobrenome");
+			col.setSobNome(entrada.nextLine());
+			
 			System.out.println("Digite o genero: (F/M/O(Outros))");
-			col.setGenero(entrada.next());
+			col.setGenero(entrada.nextLine().charAt(0));
 
 			System.out.println("Digite o telefone:((DDD) xxxxx-xxxx)");
-			col.setTelefone(entrada.next());
+			col.setTel(entrada.nextLine());
 
 			System.out.println("Digite o endereço:");
-			col.setEndereco(entrada.next());
+			col.setEnd(entrada.nextLine());
+			
+			System.out.println("Digite o Cidade:");
+			col.setCidade(entrada.nextLine());
 
 			System.out.println("Digite o UF:");
-			col.setUf(entrada.next());
-
+			col.setUf(entrada.nextLine());
+			
+			System.out.println("Deseja ser contatado pelas instituições quando forem necessarios voluntarios em projetos?: (S/N)");
+			col.setVolunt(entrada.nextLine().charAt(0));
+			
+			System.out.println("Qual sua disponibilidade para voluntariado?");
+			System.out.println("*marque 1 ou mais opções");
+			col.setCidade(entrada.nextLine());
+			
 			System.out.println("Digite o email:");
-			col.setEmail(entrada.next());
+			col.setEmail(entrada.nextLine());
 
 			System.out.println("Digite a senha:");
-			col.setSenha(entrada.next());
+			col.setSenha(entrada.nextLine());
 
-			clienteDAO.save(col);
+			colaboradorDAO.save(col);
 
-			ClienteCRUD.Cliente(args);
+			ColaboradorCRUD.Colaborador(args);
 			break;
 		case 2:
 			System.out.println("Digite o CPF do cliente que sera deletado:");
-			clienteDAO.removeByCPF(entrada.next());
-			ClienteCRUD.Cliente(args);
+			colaboradorDAO.removeBy(entrada.nextInt());
+			ColaboradorCRUD.col(args);
 			break;
 		case 3:
 			System.out.println("Digite o CPF:(xxx.xxx.xxx-xx)");
