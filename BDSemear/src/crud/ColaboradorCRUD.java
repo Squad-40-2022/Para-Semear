@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 import controller.ColaboradorDAO;
 import model.Colaborador;
-import crud.Semear;
 
 
 public class ColaboradorCRUD {
@@ -22,7 +21,7 @@ public class ColaboradorCRUD {
 		System.out.println("2 - Remover colaborador");
 		System.out.println("3 - Atualizar colaborador");
 		System.out.println("4 - Mostrar colaboradores");
-		System.out.println("5 - Buscar colaborador por ID");
+		System.out.println("5 - Buscar colaborador por CPF");
 		System.out.println("0 - Voltar");
 		menu = entrada.nextInt();
 		entrada.nextLine();
@@ -150,7 +149,7 @@ public class ColaboradorCRUD {
 			ColaboradorCRUD.Colaborador(args);
 			break;
 		case 0:
-			Semear.Semear(args);
+			Semear.main(args);
 			break;
 		default:
 			System.out.println("Opcao invalida!");

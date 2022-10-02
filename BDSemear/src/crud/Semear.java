@@ -20,7 +20,7 @@ public class Semear {
 			ColaboradorCRUD.Colaborador(args);
 			break;
 		case 2:
-			InstituicaoCRUD.main(args);
+			InstituicaoCRUD.Instituicao(args);
 			break;
 		case 0:
 			System.out.println("Ate logo!");
