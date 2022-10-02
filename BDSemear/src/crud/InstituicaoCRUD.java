@@ -22,6 +22,8 @@ public class InstituicaoCRUD {
 		System.out.println("3 - Atualizar instituição");
 		System.out.println("4 - Mostrar instituição");
 		System.out.println("5 - Buscar instituição por ID");
+		System.out.println("6 - Projetos");
+		System.out.println("7 - Relatorios");
 		System.out.println("0 - Voltar");
 		menu = entrada.nextInt();
 		entrada.nextLine();
@@ -134,18 +136,24 @@ public class InstituicaoCRUD {
 			System.out.println("Endereço: " + i.getEnd() + "  - Cidade: " +i.getCidade()+ " - UF: " + i.getUf());
 			System.out.println("Email: " + i.getEmail());
 			System.out.println("----------------------------------- ");
-		}
-		System.out.println("===============================");
+			System.out.println("===============================");
 			ColaboradorCRUD.Colaborador(args);
 			break;
-		case 0:
+	case 6:
+		ProjetoCRUD.main(args);
+		break;
+	case 7:
+		RelatorioCRUD.main(args);
+		break;
+	case 0:
 			Semear.main(args);
 			break;
-		default:
+	default:
 			System.out.println("Opcao invalida!");
 			ColaboradorCRUD.Colaborador(args);
 			break;
 
 	}
 
+}
 }

@@ -28,6 +28,7 @@ public class Semear {
 		default:
 			System.out.println("Opcao invalida!");
 			Semear.main(args);
+			
 		}
 	}
 

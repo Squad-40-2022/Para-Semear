@@ -5,7 +5,6 @@ import java.util.Scanner;
 import controller.ColaboradorDAO;
 import model.Colaborador;
 
-
 public class ColaboradorCRUD {
 
 	public static void Colaborador(String[] args) {
@@ -35,7 +34,7 @@ public class ColaboradorCRUD {
 
 			System.out.println("Digite o Sobrenome");
 			col.setSobNome(entrada.nextLine());
-			
+
 			System.out.println("Digite o genero: (F/M/O(Outros))");
 			col.setGenero(entrada.nextLine().charAt(0));
 
@@ -44,20 +43,21 @@ public class ColaboradorCRUD {
 
 			System.out.println("Digite o endereço:");
 			col.setEnd(entrada.nextLine());
-			
+
 			System.out.println("Digite o Cidade:");
 			col.setCidade(entrada.nextLine());
 
 			System.out.println("Digite o UF:");
 			col.setUf(entrada.nextLine());
-			
-			System.out.println("Deseja ser contatado pelas instituições quando forem necessarios voluntarios em projetos?: (S/N)");
+
+			System.out.println(
+					"Deseja ser contatado pelas instituições quando forem necessarios voluntarios em projetos?: (S/N)");
 			col.setVolunt(entrada.nextLine().charAt(0));
-			
+
 			System.out.println("Qual sua disponibilidade para voluntariado?");
 			System.out.println("*marque 1 ou mais opções");
 			col.setCidade(entrada.nextLine());
-			
+
 			System.out.println("Digite o email:");
 			col.setEmail(entrada.nextLine());
 
@@ -82,7 +82,7 @@ public class ColaboradorCRUD {
 
 			System.out.println("Digite o Sobrenome");
 			col.setSobNome(entrada.nextLine());
-			
+
 			System.out.println("Digite o genero: (F/M/O(Outros))");
 			col.setGenero(entrada.nextLine().charAt(0));
 
@@ -91,20 +91,21 @@ public class ColaboradorCRUD {
 
 			System.out.println("Digite o endereço:");
 			col.setEnd(entrada.nextLine());
-			
+
 			System.out.println("Digite o Cidade:");
 			col.setCidade(entrada.nextLine());
 
 			System.out.println("Digite o UF:");
 			col.setUf(entrada.nextLine());
-			
-			System.out.println("Deseja ser contatado pelas instituições quando forem necessarios voluntarios em projetos?: (S/N)");
+
+			System.out.println(
+					"Deseja ser contatado pelas instituições quando forem necessarios voluntarios em projetos?: (S/N)");
 			col.setVolunt(entrada.nextLine().charAt(0));
-			
+
 			System.out.println("Qual sua disponibilidade para voluntariado?");
 			System.out.println("*marque 1 ou mais opções");
 			col.setCidade(entrada.nextLine());
-			
+
 			System.out.println("Digite o email:");
 			col.setEmail(entrada.nextLine());
 
@@ -119,10 +120,10 @@ public class ColaboradorCRUD {
 			System.out.println("===============================");
 			for (Colaborador c : colaboradorDAO.getColaboradores()) {
 				System.out.println("Colaborador: " + c.getNome() + " " + c.getSobNome());
-				System.out.println("CPF: " + c.getCpfOrCnpj() +"        Data de Nascimento: " + c.getNasc());
+				System.out.println("CPF: " + c.getCpfOrCnpj() + "        Data de Nascimento: " + c.getNasc());
 				System.out.println("Genero: " + c.getGenero());
 				System.out.println("Telefone: " + c.getTel());
-				System.out.println("Endereço: " + c.getEnd() + "  - Cidade: " +c.getCidade()+ " - UF: " + c.getUf());
+				System.out.println("Endereço: " + c.getEnd() + "  - Cidade: " + c.getCidade() + " - UF: " + c.getUf());
 				System.out.println("Email: " + c.getEmail());
 				System.out.println("Disponibilidade: " + c.getDisp());
 				System.out.println("----------------------------------- ");
@@ -132,20 +133,19 @@ public class ColaboradorCRUD {
 			break;
 		case 5:
 			System.out.println("Digite o CPF do colaborador:");
-			
+
 			String cpf = entrada.next();
 
 			Colaborador c = colaboradorDAO.colByCpf(cpf);
 			System.out.println("Colaborador: " + c.getNome() + " " + c.getSobNome());
-			System.out.println("CPF: " + c.getCpfOrCnpj() +"        Data de Nascimento: " + c.getNasc());
+			System.out.println("CPF: " + c.getCpfOrCnpj() + "        Data de Nascimento: " + c.getNasc());
 			System.out.println("Genero: " + c.getGenero());
 			System.out.println("Telefone: " + c.getTel());
-			System.out.println("Endereço: " + c.getEnd() + "  - Cidade: " +c.getCidade()+ " - UF: " + c.getUf());
+			System.out.println("Endereço: " + c.getEnd() + "  - Cidade: " + c.getCidade() + " - UF: " + c.getUf());
 			System.out.println("Email: " + c.getEmail());
 			System.out.println("Disponibilidade: " + c.getDisp());
 			System.out.println("----------------------------------- ");
-		}
-		System.out.println("===============================");
+			System.out.println("===============================");
 			ColaboradorCRUD.Colaborador(args);
 			break;
 		case 0:
@@ -156,5 +156,6 @@ public class ColaboradorCRUD {
 			ColaboradorCRUD.Colaborador(args);
 			break;
 
-}
+		}
+	}
 }
