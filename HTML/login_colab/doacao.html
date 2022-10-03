@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Doação</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="../../CSS/style-log_colab.css">
-    <link rel="icon" type="imagem/png" href="../IMG/icon-nav.png"/>
+    <link rel="icon" type="imagem/png" href="/IMG/icon-nav.png"/>
 </head>
 
 <body>
@@ -87,6 +87,7 @@
                 </div>
 
             </main>
+            
             <div class="container">
                 <div class="mb-4 row justify-content-between">
                     <aside class="col-3 conteudo">
@@ -105,7 +106,95 @@
                         </div>
                     </aside>
                     <section class="col-xl-8 col-12 conteudo cont-fixed p-5">
-                        <h1>Em construção...</h1>
+                        <div class="card">
+
+                            <form action="">
+                        
+                                <div class="row">
+                        
+                                    <div class="col">
+                        
+                                        <h3 class="title">Tipo de doação:</h3>
+                        
+                                        <div class="inputBox">
+                                            <label for="horns">Dinheiro:</label>
+                                            <input type="checkbox" id="horns" name="horns">
+                                
+                                        </div>     
+                        
+                                        <div class="inputBox">
+                                            <label for="horns">Outros:</label>
+                                            <input type="checkbox" id="horns" name="horns">
+                                        </div> 
+                                        
+                                        <h6>Descreva sua doação:</h6>
+                                        <textarea name="Decrição" id="descri_doacao" cols="30" rows="5"></textarea>
+                                  
+                                        <h6>Qual ONG?</h6>
+                                       <div class="inputBox">
+                                        <select name="ONG" id="doacao_ong_select">
+                                            <option value="ACMT">ACMT</option>
+                                            <option value="#">Lorem</option>
+                                            <option value="#">Lorem</option>
+                                        </select>
+                                       </div>
+                                    </div>
+                        
+                                    <div class="col">
+                        
+                                        
+                        
+                                    
+                                        <!-- <div class="inputBox">
+                                            <span>Número de contato :</span>
+                                            <input type="number" placeholder="+55 43 22222 4444">
+                                        </div> -->
+                        
+                                        <h6 class="title">Doação anônima?</h6>
+                        
+                                        <div class="inputBox">
+                                            <label for="horns">Sim:</label>
+                                            <input type="checkbox" id="horns" name="horns">
+                                
+                                        </div>     
+                            
+                                        <div class="inputBox">
+                                            <label for="horns">Não:</label>
+                                            <input type="checkbox" id="horns" name="horns">
+                                        </div> 
+                        
+                                        <div class="flex">
+                                            <div class="inputBox">
+                                                <span>quantidade</span>
+                                                <input type="number" placeholder="5">
+                                            </div>
+                                            <div class="inputBox">
+                                                <span>Data</span>
+                                                <input type="datetime" placeholder="10/2/2022">
+                                            </div>
+                                        </div>
+                                              
+                                        <h6>Ao prosseguir você concorda que sua solicitação de doação será direcionada para o site da ong e seus dados armazenados aqui
+                                            serão apenas para o retorno dos gastos feitos através de recibos.
+                                        </h6>
+                                        <input type="checkbox" id="horns" name="horns">
+                                    </div>
+                            
+                                </div>
+                        
+                                <!--
+                        
+                                <a href="/Para-Semear-main/index.html">
+                                <input type="submit" value="Prosseguir com o Checkout" class="submit-btn">
+                                </a>
+                                -->
+                            </form>
+                        
+                            <!-- mudar dps o link para o css, está bugado, mas o tempo de entrega é curto -->
+                            <a href="#"><button style="background: #d89959; border-radius: 10px; padding: 15px; cursor: pointer; color: #fff; border: none; font-size: 16px;">Prosseguir com a doação</button></a>
+                           
+                        </div>    
+                            
                     </section>
                 </div>
 
