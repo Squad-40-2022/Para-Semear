@@ -90,6 +90,11 @@ header {
 .img-fundo{
     max-height: 100vh;
     width: auto;
+    overflow: auto;
+}
+.img-ca{
+    max-height: 100%;
+    width: auto;
 }
 /*CONTEUDO*/
 
