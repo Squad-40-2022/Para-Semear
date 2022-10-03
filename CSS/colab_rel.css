@@ -2,6 +2,13 @@
     display:inline;
 
 }
+/*Rodape*/
+footer {
+    color: #ffffff;
+    background-color: #B29272;
+    text-align: center;
+  }
+  /*Rodape*/
 @media print{
     .no-print{
     display: none ;
