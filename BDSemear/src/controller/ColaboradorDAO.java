@@ -198,9 +198,9 @@ public class ColaboradorDAO {
 		return colaboradores;
 	}
 
-	public Colaborador colById(int id) {
+	public Colaborador colByCpf(String cpf) {
 
-		String sql = "SELECT * FROM colaborador WHERE id_col=?";
+		String sql = "SELECT * FROM colaborador WHERE cpf_cnpj_col=?";
 
 		ResultSet rset = null;
 
@@ -209,7 +209,7 @@ public class ColaboradorDAO {
 		try {
 			conn = Conexao.createConnectionToMySQL();
 			pstm = conn.prepareStatement(sql);
-			pstm.setInt(1, id);
+			pstm.setString(1, cpf);
 			rset = pstm.executeQuery();
 
 			rset.next();

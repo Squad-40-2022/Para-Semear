@@ -11,16 +11,28 @@ public class Semear {
 
 		System.out.println("========== MENU ==========");
 		System.out.println("1 - Colaborador");
-		System.out.println("2 - Instituição");
+		System.out.println("2 - Instituicao");
+		System.out.println("3 - Projetos");
+		System.out.println("4 - Relatorio");
+		System.out.println("5 - Doacao");
 		System.out.println("0 - Sair");
 
 		menu = entrada.nextInt();
 		switch (menu) {
 		case 1:
-			ColaboradorCRUD.main(args);
+			ColaboradorCRUD.Colaborador(args);
 			break;
 		case 2:
-			InstituicaoCRUD.main(args);
+			InstituicaoCRUD.Instituicao(args);
+			break;
+		case 3:
+			ProjetoCRUD.main(args);
+			break;
+		case 4:
+			RelatorioCRUD.main(args);
+			break;
+		case 5:
+			DoacaoCRUD.main(args);
 			break;
 		case 0:
 			System.out.println("Ate logo!");
@@ -28,7 +40,8 @@ public class Semear {
 		default:
 			System.out.println("Opcao invalida!");
 			Semear.main(args);
+			
 		}
+		entrada.close();
 	}
-
 }

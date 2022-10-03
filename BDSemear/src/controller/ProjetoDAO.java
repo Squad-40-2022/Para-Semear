@@ -183,9 +183,9 @@ public class ProjetoDAO {
 		return projetos;
 	}
 
-	public Projeto proById(int id) {
+	public Projeto buscarProj(String nome) {
 
-		String sql = "SELECT * FROM projetos WHERE id_pro=?";
+		String sql = "SELECT * FROM projetos WHERE nome_proj=?";
 
 		ResultSet rset = null;
 
@@ -195,7 +195,7 @@ public class ProjetoDAO {
 		try {
 			conn = Conexao.createConnectionToMySQL();
 			pstm = conn.prepareStatement(sql);
-			pstm.setInt(1, id);
+			pstm.setString(1, nome);
 			rset = pstm.executeQuery();
 
 			rset.next();

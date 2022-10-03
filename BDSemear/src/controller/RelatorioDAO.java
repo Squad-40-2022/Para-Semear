@@ -229,6 +229,6 @@ public class RelatorioDAO {
 				e.printStackTrace();
 			}
 		}
-		return rel;
+		return rel ;
 	}
 }
