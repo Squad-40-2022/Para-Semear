@@ -16,12 +16,12 @@ public class InstituicaoCRUD {
 
 		int menu;
 
-		System.out.println("========== CLIENTE ==========");
-		System.out.println("1 - Cadastrar instituição");
-		System.out.println("2 - Remover instituição");
-		System.out.println("3 - Atualizar instituição");
-		System.out.println("4 - Mostrar instituição");
-		System.out.println("5 - Buscar instituição por ID");
+		System.out.println("========== INSTITUICAO ==========");
+		System.out.println("1 - Cadastrar instituicao");
+		System.out.println("2 - Remover instituicao");
+		System.out.println("3 - Atualizar instituicao");
+		System.out.println("4 - Mostrar instituicao");
+		System.out.println("5 - Buscar instituicao por ID");
 		//System.out.println("5 - Buscar instituição por nome");
 		//System.out.println("5 - Buscar instituição por cidade");
 		//System.out.println("5 - Buscar instituição por uf");
@@ -71,21 +71,26 @@ public class InstituicaoCRUD {
 			InstituicaoCRUD.Instituicao(args);
 			break;
 		case 2:
-			System.out.println("Digite o CPF do cliente que sera deletado:");
+			System.out.println("Digite o ID da instituicao que sera deletada:");
 			instituicaoDAO.removeBy(entrada.nextInt());
-			ColaboradorCRUD.Colaborador(args);
+
+			InstituicaoCRUD.Instituicao(args);
 			break;
 		case 3:
+			System.out.println("Digite o ID da instituicao:");
+			ins.setId(entrada.nextInt());
+			
 			System.out.println("Digite o CNPJ:(xx.xxx.xxx/xxxx-xx)");
 			ins.setCnpj(entrada.nextLine());
+			entrada.nextLine();
 
-			System.out.println("Digite a Razão Social:");
+			System.out.println("Digite a Razao Social:");
 			ins.setRazSocial(entrada.nextLine());
 
 			System.out.println("Digite o Nome Fantasia:");
 			ins.setNomeFant(entrada.nextLine());
 			
-			System.out.println("Digite o nome do responsável:");
+			System.out.println("Digite o nome do responsavel:");
 			ins.setNomeResp(entrada.nextLine());
 						
 			System.out.println("Digite o telefone:((DDD) xxxxx-xxxx)");
@@ -94,7 +99,7 @@ public class InstituicaoCRUD {
 			System.out.println("Digite o endereço:");
 			ins.setEnd(entrada.nextLine());
 			
-			System.out.println("Digite o Cidade:");
+			System.out.println("Digite a cidade:");
 			ins.setCidade(entrada.nextLine());
 
 			System.out.println("Digite o UF:");
@@ -106,7 +111,7 @@ public class InstituicaoCRUD {
 			System.out.println("Digite a senha:");
 			ins.setSenha(entrada.nextLine());
 			
-			System.out.println("Ensira os documentos da instituição");
+			System.out.println("Ensira os documentos da instituicao");
 			ins.setDoc(entrada.nextLine());
 
 			instituicaoDAO.update(ins);

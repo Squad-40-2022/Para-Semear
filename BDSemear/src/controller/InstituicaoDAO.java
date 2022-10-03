@@ -93,7 +93,7 @@ public class InstituicaoDAO {
 	
 	public void update(Instituicao ins) {
 
-		String sql = "update instituicoes SET cnpj_ins = ?,rs = ?,n_fant = ?,n_res = ?,tel_ins = ?,email_ins = ?,senha_ins = ?,end_ins = ?,cid_ins = ?,uf_ins = ?,doc_ins = ? where id_col = ?";
+		String sql = "update instituicoes SET cnpj_ins = ?,rs = ?,n_fant = ?,n_res = ?,tel_ins = ?,email_ins = ?,senha_ins = ?,end_ins = ?,cid_ins = ?,uf_ins = ?,doc_ins = ? where id_ins = ?";
 		
 		try {
 			
