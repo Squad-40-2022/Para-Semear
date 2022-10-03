@@ -26,141 +26,96 @@ public class ProjetoCRUD {
 			entrada.nextLine();
 			switch (menu) {
 			case 1:
-				System.out.println("Digite o CPF:(xxx.xxx.xxx-xx)");
-				col.setCpfOrCnpj(entrada.nextLine());
+				System.out.println("Qual o nome do Projeto? ");
+				pro.setNome(entrada.nextLine());
 
-				System.out.println("Digite o nome:");
-				col.setNome(entrada.nextLine());
+				System.out.println("Local onde sera realizado: ");
+				pro.setLocal(entrada.nextLine());
 
-				System.out.println("Digite o Sobrenome");
-				col.setSobNome(entrada.nextLine());
+				System.out.println("Qual o numero de contemplados? ");
+				pro.setNumCont(entrada.nextInt());
 
-				System.out.println("Digite o genero: (F/M/O(Outros))");
-				col.setGenero(entrada.nextLine().charAt(0));
+				System.out.println("Qual a frequencia em que esse projeto ocorrera? ");
+				pro.setFrequencia(entrada.nextLine());
 
-				System.out.println("Digite o telefone:((DDD) xxxxx-xxxx)");
-				col.setTel(entrada.nextLine());
+				System.out.println("Descreva o projeto");
+				pro.setDescricao(entrada.nextLine());
 
-				System.out.println("Digite o endereço:");
-				col.setEnd(entrada.nextLine());
+				System.out.println("Situacao do projetos?: (A/I)");
+				pro.setSituacao(entrada.nextLine().charAt(0));
 
-				System.out.println("Digite o Cidade:");
-				col.setCidade(entrada.nextLine());
+				pDAO.save(pro);
 
-				System.out.println("Digite o UF:");
-				col.setUf(entrada.nextLine());
-
-				System.out.println(
-						"Deseja ser contatado pelas instituições quando forem necessarios voluntarios em projetos?: (S/N)");
-				col.setVolunt(entrada.nextLine().charAt(0));
-
-				System.out.println("Qual sua disponibilidade para voluntariado?");
-				System.out.println("*marque 1 ou mais opções");
-				col.setCidade(entrada.nextLine());
-
-				System.out.println("Digite o email:");
-				col.setEmail(entrada.nextLine());
-
-				System.out.println("Digite a senha:");
-				col.setSenha(entrada.nextLine());
-
-				colaboradorDAO.save(col);
-
-				ColaboradorCRUD.Colaborador(args);
+				ProjetoCRUD.main(args);
 				break;
 			case 2:
 				System.out.println("Digite o CPF do cliente que sera deletado:");
-				colaboradorDAO.removeBy(entrada.nextInt());
-				ColaboradorCRUD.Colaborador(args);
+				pDAO.removeBy(entrada.nextInt());
+				ProjetoCRUD.main(args);
 				break;
 			case 3:
-				System.out.println("Digite o CPF:(xxx.xxx.xxx-xx)");
-				col.setCpfOrCnpj(entrada.nextLine());
+				System.out.println("Qual o nome do Projeto? ");
+				pro.setNome(entrada.nextLine());
 
-				System.out.println("Digite o nome:");
-				col.setNome(entrada.nextLine());
+				System.out.println("Local onde sera realizado: ");
+				pro.setLocal(entrada.nextLine());
 
-				System.out.println("Digite o Sobrenome");
-				col.setSobNome(entrada.nextLine());
+				System.out.println("Qual o numero de contemplados? ");
+				pro.setNumCont(entrada.nextInt());
 
-				System.out.println("Digite o genero: (F/M/O(Outros))");
-				col.setGenero(entrada.nextLine().charAt(0));
+				System.out.println("Qual a frequencia em que esse projeto ocorrera? ");
+				pro.setFrequencia(entrada.nextLine());
 
-				System.out.println("Digite o telefone:((DDD) xxxxx-xxxx)");
-				col.setTel(entrada.nextLine());
+				System.out.println("Descreva o projeto");
+				pro.setDescricao(entrada.nextLine());
 
-				System.out.println("Digite o endereço:");
-				col.setEnd(entrada.nextLine());
+				System.out.println("Situacao do projetos?: (A/I)");
+				pro.setSituacao(entrada.nextLine().charAt(0));
 
-				System.out.println("Digite o Cidade:");
-				col.setCidade(entrada.nextLine());
-
-				System.out.println("Digite o UF:");
-				col.setUf(entrada.nextLine());
-
-				System.out.println(
-						"Deseja ser contatado pelas instituições quando forem necessarios voluntarios em projetos?: (S/N)");
-				col.setVolunt(entrada.nextLine().charAt(0));
-
-				System.out.println("Qual sua disponibilidade para voluntariado?");
-				System.out.println("*marque 1 ou mais opções");
-				col.setCidade(entrada.nextLine());
-
-				System.out.println("Digite o email:");
-				col.setEmail(entrada.nextLine());
-
-				System.out.println("Digite a senha:");
-				col.setSenha(entrada.nextLine());
-
-				colaboradorDAO.update(col);
-				ColaboradorCRUD.Colaborador(args);
+				pDAO.update(pro);
+				ProjetoCRUD.main(args);
 				break;
 
 			case 4:
 				System.out.println("===============================");
-				for (Colaborador c : colaboradorDAO.getColaboradores()) {
-					System.out.println("Colaborador: " + c.getNome() + " " + c.getSobNome());
-					System.out.println("CPF: " + c.getCpfOrCnpj() + "        Data de Nascimento: " + c.getNasc());
-					System.out.println("Genero: " + c.getGenero());
-					System.out.println("Telefone: " + c.getTel());
-					System.out.println("Endereço: " + c.getEnd() + "  - Cidade: " + c.getCidade() + " - UF: " + c.getUf());
-					System.out.println("Email: " + c.getEmail());
-					System.out.println("Disponibilidade: " + c.getDisp());
+				for (Projeto p : pDAO.getProjetos()) {
+					System.out.println("Nome: " + p.getNome());
+					System.out.println("Local: " + p.getLocal());
+					System.out.println("Qtd de Contemplados: " + p.getNumCont());
+					System.out.println("Frequencia: " + p.getFrequencia());
+					System.out.println("Situacao: " + p.getSituacao());
+					System.out.println("Descricao: " + p.getDescricao());
 					System.out.println("----------------------------------- ");
 				}
 				System.out.println("===============================");
-				ColaboradorCRUD.Colaborador(args);
+				ProjetoCRUD.main(args);
 				break;
 			case 5:
-				System.out.println("Digite o CPF do colaborador:");
+				System.out.println("Digite o nome do Projeto:");
 
-				String cpf = entrada.next();
+				String nome = entrada.next();
 
-				Colaborador c = colaboradorDAO.colByCpf(cpf);
-				System.out.println("Colaborador: " + c.getNome() + " " + c.getSobNome());
-				System.out.println("CPF: " + c.getCpfOrCnpj() + "        Data de Nascimento: " + c.getNasc());
-				System.out.println("Genero: " + c.getGenero());
-				System.out.println("Telefone: " + c.getTel());
-				System.out.println("Endereço: " + c.getEnd() + "  - Cidade: " + c.getCidade() + " - UF: " + c.getUf());
-				System.out.println("Email: " + c.getEmail());
-				System.out.println("Disponibilidade: " + c.getDisp());
+				Projeto p = pDAO.buscarProj(nome);
+				System.out.println("Nome: " + p.getNome());
+				System.out.println("Local: " + p.getLocal());
+				System.out.println("Qtd de Contemplados: " + p.getNumCont());
+				System.out.println("Frequencia: " + p.getFrequencia());
+				System.out.println("Situacao: " + p.getSituacao());
+				System.out.println("Descricao: " + p.getDescricao());
 				System.out.println("----------------------------------- ");
 				System.out.println("===============================");
-				ColaboradorCRUD.Colaborador(args);
+				ProjetoCRUD.main(args);
 				break;
 			case 0:
 				Semear.main(args);
 				break;
 			default:
 				System.out.println("Opcao invalida!");
-				ColaboradorCRUD.Colaborador(args);
+				ProjetoCRUD.main(args);
 				break;
 
 			}
 			entrada.close();
-		}
-	}
-
-}
+			}
 
 }
