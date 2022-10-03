@@ -56,15 +56,16 @@ public class RelatorioDAO {
 		}
 	}
 
-	public void removeBy(int id) {
+	public void removeBy(int mes, int ano) {
 
-		String sql = "DELETE FROM relatorio WHERE id_rel=?";
+		String sql = "DELETE FROM relatorio WHERE mes_rel=? and ano_rel=?";
 
 		try {
 			conn = Conexao.createConnectionToMySQL();
 			pstm = conn.prepareStatement(sql);
 
-			pstm.setInt(1, id);
+			pstm.setInt(1, mes);
+			pstm.setInt(2, ano);
 
 			pstm.execute();
 
@@ -184,9 +185,9 @@ public class RelatorioDAO {
 		return relatorios;
 	}
 
-	public Relatorio relById(int id) {
+	public Relatorio relMesAno(int mes, int ano) {
 
-		String sql = "SELECT * FROM relatorio WHERE id_rel=?";
+		String sql = "SELECT * FROM relatorio WHERE mes_rel=? and ano_rel=?";
 
 		ResultSet rset = null;
 
@@ -196,7 +197,8 @@ public class RelatorioDAO {
 		try {
 			conn = Conexao.createConnectionToMySQL();
 			pstm = conn.prepareStatement(sql);
-			pstm.setInt(1, id);
+			pstm.setInt(1, mes);
+			pstm.setInt(2, ano);
 			rset = pstm.executeQuery();
 
 			rset.next();
