@@ -104,3 +104,6 @@ footer {
 ::-webkit-scrollbar-track {
   background-color: #DDD3CA;
 }
+@media (max-width:900px) {
+  
+}
