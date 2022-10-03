@@ -17,10 +17,10 @@ public class Semear {
 		menu = entrada.nextInt();
 		switch (menu) {
 		case 1:
-			ColaboradorCRUD.main(args);
+			ColaboradorCRUD.Colaborador(args);
 			break;
 		case 2:
-			InstituicaoCRUD.main(args);
+			InstituicaoCRUD.Instituicao(args);
 			break;
 		case 0:
 			System.out.println("Ate logo!");
@@ -28,7 +28,8 @@ public class Semear {
 		default:
 			System.out.println("Opcao invalida!");
 			Semear.main(args);
+			
 		}
+		entrada.close();
 	}
-
 }
