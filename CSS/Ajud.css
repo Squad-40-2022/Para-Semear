@@ -48,6 +48,11 @@ body{
 form{
   padding: 50px;
 }
+.ajuda{
+  display:grid;
+  align-items: center;
+  justify-content: center;
+}
 h3{
   color: #041d13;
   text-align: center;
@@ -56,23 +61,21 @@ label{
   font-size: 20px;
   color:#0f291e;
 }
-
+#dados{
+  text-align: left;
+  width: 50rem;
+  padding: 1rem;
+}
 .btnn {
+  width: 8rem;
   background-color: #B29272;
   padding:5px 5px;
-}
-.dados{
-  padding: 1rem;
-}
-.relato{
-  padding: 1rem;
+  border-radius: 10px;
 }
 
 /*Rodape*/
 footer {
-  display: grid;
   color: #ffffff;
-  grid-template-columns: auto auto;
   background-color: #B29272;
   text-align: center;
 }

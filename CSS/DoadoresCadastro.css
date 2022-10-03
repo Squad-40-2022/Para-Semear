@@ -125,12 +125,10 @@ label {
 /*termo*/
 /*Cadas Doadores*/
 
-
-
-
 footer {
-    background-color: #B29272;
-    color: #ffffff;
+        color: #ffffff;
+        background-color: #B29272;
+        text-align: center;
 }
 
 /*BARRA DE NAVEGAÇÃO*/
