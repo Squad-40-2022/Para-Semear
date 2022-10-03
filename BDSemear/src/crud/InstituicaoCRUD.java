@@ -79,10 +79,10 @@ public class InstituicaoCRUD {
 		case 3:
 			System.out.println("Digite o ID da instituicao:");
 			ins.setId(entrada.nextInt());
+			entrada.nextLine();
 			
 			System.out.println("Digite o CNPJ:(xx.xxx.xxx/xxxx-xx)");
 			ins.setCnpj(entrada.nextLine());
-			entrada.nextLine();
 
 			System.out.println("Digite a Razao Social:");
 			ins.setRazSocial(entrada.nextLine());
@@ -121,32 +121,32 @@ public class InstituicaoCRUD {
 		case 4:
 			System.out.println("===============================");
 			for (Instituicao i : instituicaoDAO.getInstituicoes()) {
-				System.out.println("Instituição: " + i.getNomeFant());
+				System.out.println("Instituicao: " + i.getNomeFant());
 				System.out.println("CNPJ: " + i.getCnpj());
 				System.out.println("Responsavel: " + i.getNomeResp());
 				System.out.println("Telefone: " + i.getTel());
-				System.out.println("Endereço: " + i.getEnd() + "  - Cidade: " +i.getCidade()+ " - UF: " + i.getUf());
+				System.out.println("Endereco: " + i.getEnd() + "  - Cidade: " +i.getCidade()+ " - UF: " + i.getUf());
 				System.out.println("Email: " + i.getEmail());
 				System.out.println("----------------------------------- ");
 			}
 			System.out.println("===============================");
-			ColaboradorCRUD.Colaborador(args);
+			InstituicaoCRUD.Instituicao(args);
 			break;
 		case 5:
-			System.out.println("Digite o CPF do colaborador:");
+			System.out.println("Digite o ID da instituicao:");
 			
-			Integer id = entrada.nextInt();
+			int id = entrada.nextInt();
 
 			Instituicao i = instituicaoDAO.insById(id);
-			System.out.println("Instituição: " + i.getNomeFant());
+			System.out.println("Instituicao: " + i.getNomeFant());
 			System.out.println("CNPJ: " + i.getCnpj());
 			System.out.println("Responsavel: " + i.getNomeResp());
 			System.out.println("Telefone: " + i.getTel());
-			System.out.println("Endereço: " + i.getEnd() + "  - Cidade: " +i.getCidade()+ " - UF: " + i.getUf());
+			System.out.println("Endereco: " + i.getEnd() + "  - Cidade: " +i.getCidade()+ " - UF: " + i.getUf());
 			System.out.println("Email: " + i.getEmail());
 			System.out.println("----------------------------------- ");
 			System.out.println("===============================");
-			ColaboradorCRUD.Colaborador(args);
+			InstituicaoCRUD.Instituicao(args);
 			break;
 	case 6:
 		ProjetoCRUD.main(args);
@@ -159,7 +159,7 @@ public class InstituicaoCRUD {
 			break;
 	default:
 			System.out.println("Opcao invalida!");
-			ColaboradorCRUD.Colaborador(args);
+			InstituicaoCRUD.Instituicao(args);
 			break;
 
 	}
