@@ -55,7 +55,6 @@
    }
    .Cadastro{
    padding:1.5rem;
-   border: solid #1A2915;
    }
    #cads{
     display: grid;
@@ -80,9 +79,13 @@
    text-align: center;
    color: #1A2915;
    }
-   .btnn{
-   background-color: #B29272;
-   }
+   .btnn {
+    background-color: #B29272;
+    padding:5px 5px;
+    font-size: 1.5rem;
+    border-radius: 8px;
+    color:black;
+}
    label{
       color: #1A2915;
    }

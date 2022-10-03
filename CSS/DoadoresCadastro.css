@@ -74,6 +74,8 @@ label {
     background-color: #B29272;
     padding:5px 5px;
     font-size: 1.5rem;
+    border-radius: 8px;
+    color:black;
 }
 /*termo*/
 .modal-container{
