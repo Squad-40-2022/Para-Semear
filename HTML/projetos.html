@@ -14,71 +14,70 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 </head>
 <body> 
-    <div class="principal">
-            <header>
-                  <div class="row">
-                      <nav class="navbar navbar-expand-md navbar-light col-10 d-flex align-items-end">
-                          <a class="navbar-brand" href="../index.html"><img src="../IMG/logo/logo-100px.png" alt=""></a>
-                          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                              data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
-                              aria-label="Toggle navigation">
-                              <span class="navbar-toggler-icon"></span>
-                          </button>
-                          <div class="collapse navbar-collapse" id="collapsibleNavId">
-                              <ul class="navbar-nav me-auto mt-2 mt-lg-0">
-                                  <li class="nav-item">
-                                      <a class="nav-link text-white" href="index.html">Home</a>
-                                  </li>
-                                  <li class="nav-item">
-                                      <a class="nav-link text-white" href="../HTML/colaboradores.html">Colaboradores</a>
-                                  </li>
-                                  <li class="nav-item">
-                                      <a class="nav-link text-white" href="../HTML/instituicoes.html">Instituições</a>
-                                  </li>
-                              </ul>
-                          </div>
-                      </nav>
-                      <!--LOGIN-->
-                      <div class="col-1 d-flex align-items-end pb-2">
-                          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                              <img src="../IMG/Icon-login.png" alt="">
-                          </button>
-          
-                          <!-- Modal -->
-                          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                              aria-hidden="true">
-                              <div class="modal-dialog">
-                                  <div class="modal-content p-4">
-                                      <h3 class="mb-4">Olá! Você é?</h3>
-                                      <button class="btn bt-log mb-4"><a href="../html/login_c.html" class="tx">Colaborador</a></button>
-                                      <button class="btn bt-log mb-4"><a href="../html/login_i.html" class="tx">Instituição</a></button>
-                                  </div>
-                              </div>
-                          </div>
-                <div class="row">
-                  <nav class="navbar navbar-expand-md navbar-light col-10 d-flex align-items-end">
-                    <a class="navbar-brand" href="index.html"><img src="IMG/logo/logo-100px.png" alt=""></a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId"
-                      aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+    <!--BARRA DE NAVEGAÇÃO-->
+    <header>
+      <div class="container">
+          <div class="row">
+              <!--BARRA DE NAVEGAÇÃO-->
+              <nav class="navbar navbar-expand-md navbar-light col-10 d-flex align-items-end">
+                  <a class="navbar-brand" href="../index.html"><img src="../IMG/logo/logo-100px.png" alt=""></a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                      aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="collapsibleNavId">
+                  </button>
+                  <div class="collapse navbar-collapse" id="collapsibleNavId">
                       <ul class="navbar-nav me-auto mt-2 mt-lg-0">
-                        <li class="nav-item">
-                          <a class="nav-link text-white" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link text-white" href="HTML/colaboradores.html">Colaboradores</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link text-white" href="HTML/instituicoes.html">Instituições</a>
-                        </li>
+                          <li class="nav-item">
+                              <a class="nav-link text-white" href="../index.html">Home</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link text-white" href="colaboradores.html">Colaboradores</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link text-white" href="instituicoes.html">Instituições</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link text-white" href="/HTML/ajuda.html">Ajuda</a>
+                          </li>
                       </ul>
-                    </div>
-             
-                </nav>
+                  </div>
+              </nav>
+              <!--Menu lateral-->
+              <aside class="col-1 d-flex align-items-end pb-2">
+                  <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
+                      aria-controls="offcanvasScrolling"><img src="../IMG/Icon-login.png" alt=""></button>
 
-              </header> 
+                  <div class="offcanvas offcanvas-end canva overflow-auto" data-bs-scroll="true"
+                      data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling"
+                      aria-labelledby="offcanvasScrollingLabel">
+                      <div class="offcanvas-header">
+                          <h5 class="offcanvas-title" id="offcanvasScrollingLabel"><img src="../IMG/user.png" alt="">
+                              Verde oliva</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                              aria-label="Close"></button>
+                      </div>
+                      <div class="row p-5">
+                          <button class="btn bt-log" data-bs-toggle="modal"
+                              data-bs-target="#staticBackdrop001">Dados</button>
+                          <button class="btn bt-log" data-bs-toggle="modal"
+                              data-bs-target="#staticBackdrop002">Projetos </button>
+                          <button class="btn bt-log" data-bs-toggle="modal"
+                              data-bs-target="#staticBackdrop003">Doação</button>
+                          <button class="btn bt-log" data-bs-toggle="modal"
+                              data-bs-target="#staticBackdrop004">Voluntarios</button>
+                          <button class="btn bt-log" data-bs-toggle="modal"
+                              data-bs-target="#staticBackdrop005">Relatórios</button>
+                          <button class="btn bt-log">Configurações e privacidade</button>
+                          <button class="btn bt-log">Ajuda e suporte</button>
+                          <button class="btn bt-log">Sair</button>
+                      </div>
+                  </div>
+              </aside>
+              <!--menu lateral-->
+          </div>
+      </div>
+  </header>
 <div class="borda container">
   
   <form>
