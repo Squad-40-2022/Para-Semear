@@ -17,25 +17,24 @@ public class InstituicaoDAO {
 
 	public void save(Instituicao ins) {
 
-		String sql = "INSERT INTO INSTITUCOES(tel_ins,senha_ins,email_ins,cnpj_ins,n_res,n_fant,rs,end_ins,doc_ins,uf_ins,cid_ins,id_ins)" + " VALUE(?,?,?,?,?,?,?,?)";
+		String sql = "INSERT INTO instituicoes (cnpj_ins,rs,n_fant,n_res,tel_ins,email_ins,senha_ins,end_ins,cid_ins,uf_ins,doc_ins)" + " VALUE(?,?,?,?,?,?,?,?,?,?,?)";
 		
 		try {
 			
 			conn = Conexao.createConnectionToMySQL();
 			pstm = conn.prepareStatement(sql);
 
-			pstm.setString(1, ins.getTel());
-			pstm.setString(2, ins.getSenha());
-			pstm.setString(3, ins.getEmail());
-			pstm.setString(4, ins.getCnpj());
-			pstm.setString(5, ins.getNomeResp());
-			pstm.setString(6, ins.getNomeFant());
-			pstm.setString(7, ins.getRazSocial());
+			pstm.setString(1, ins.getCnpj());
+			pstm.setString(2, ins.getRazSocial());
+			pstm.setString(3, ins.getNomeFant());
+			pstm.setString(4, ins.getNomeResp());
+			pstm.setString(5, ins.getTel());
+			pstm.setString(6, ins.getEmail());
+			pstm.setString(7, ins.getSenha());
 			pstm.setString(8, ins.getEnd());
-			pstm.setString(9, ins.getDoc());
+			pstm.setString(9, ins.getCidade());
 			pstm.setString(10, ins.getUf());
-			pstm.setString(11, ins.getCidade());
-			pstm.setInt(12, ins.getId());
+			pstm.setString(11, ins.getDoc());
 
 			pstm.execute();
 			
@@ -62,7 +61,7 @@ public class InstituicaoDAO {
 
 	public void removeBy(int id) {
 
-		String sql = "DELETE FROM INSTITUICOES WHERE id_ins=?";
+		String sql = "DELETE FROM instituicoes WHERE id_ins=?";
 
 		try {
 			conn = Conexao.createConnectionToMySQL();
@@ -94,24 +93,24 @@ public class InstituicaoDAO {
 	
 	public void update(Instituicao ins) {
 
-		String sql = "update INSTITUICOES SET tel_ins=? senha_ins=? email_ins=? cnpj_ins=? n_res=? n_fant=? rs=? end_ins=? doc_ins=? uf_ins=? cid_ins=? id_ins=?  ";
+		String sql = "update instituicoes SET cnpj_ins = ?,rs = ?,n_fant = ?,n_res = ?,tel_ins = ?,email_ins = ?,senha_ins = ?,end_ins = ?,cid_ins = ?,uf_ins = ?,doc_ins = ? where id_col = ?";
 		
 		try {
 			
 			conn = Conexao.createConnectionToMySQL();
 			pstm = conn.prepareStatement(sql);
 			
-			pstm.setString(1, ins.getTel());
-			pstm.setString(2, ins.getSenha());
-			pstm.setString(3, ins.getEmail());
-			pstm.setString(4, ins.getCnpj());
-			pstm.setString(5, ins.getNomeResp());
-			pstm.setString(6, ins.getNomeFant());
-			pstm.setString(7, ins.getRazSocial());
+			pstm.setString(1, ins.getCnpj());
+			pstm.setString(2, ins.getRazSocial());
+			pstm.setString(3, ins.getNomeFant());
+			pstm.setString(4, ins.getNomeResp());
+			pstm.setString(5, ins.getTel());
+			pstm.setString(6, ins.getEmail());
+			pstm.setString(7, ins.getSenha());
 			pstm.setString(8, ins.getEnd());
-			pstm.setString(9, ins.getDoc());
+			pstm.setString(9, ins.getCidade());
 			pstm.setString(10, ins.getUf());
-			pstm.setString(11, ins.getCidade());
+			pstm.setString(11, ins.getDoc());
 			pstm.setInt(12, ins.getId());
 
 			pstm.execute();
@@ -139,7 +138,7 @@ public class InstituicaoDAO {
 
 	public List<Instituicao> getInstituicoes() {
 
-		String sql = "SELECT * FROM INSTITUICOES";
+		String sql = "SELECT * FROM instituicoes";
 
 		List<Instituicao> instituicoes = new ArrayList<Instituicao>();
 
@@ -191,7 +190,7 @@ public class InstituicaoDAO {
 
 	public Instituicao insById(int id) {
 
-		String sql = "SELECT * FROM INSTITUICOES WHERE id_ins=?";
+		String sql = "SELECT * FROM instituicoes WHERE id_ins=?";
 
 		ResultSet rset = null;
 
