@@ -2,19 +2,22 @@ package crud;
 
 import java.util.Scanner;
 
+import controller.InstituicaoDAO;
 import controller.ProjetoDAO;
+import model.Instituicao;
 import model.Projeto;
 
 public class ProjetoCRUD {
 	public static void main(String[] args) {
 		Scanner entrada = new Scanner(System.in);
 		ProjetoDAO pDAO = new ProjetoDAO();
+		InstituicaoDAO iDAO = new InstituicaoDAO();
 
 		Projeto pro = new Projeto();
 
 		int menu;
 
-		System.out.println("========== CLIENTE ==========");
+		System.out.println("========== PROJETO ==========");
 		System.out.println("1 - Cadastrar novo projeto");
 		System.out.println("2 - Remover projeto");
 		System.out.println("3 - Atualizar projeto");
@@ -28,6 +31,11 @@ public class ProjetoCRUD {
 		entrada.nextLine();
 		switch (menu) {
 		case 1:
+			System.out.println("Digite o ID da instituicao:");
+			Instituicao ins = iDAO.insById(entrada.nextInt());
+			pro.setInstituicao(ins);
+			entrada.nextLine();
+			
 			System.out.println("Qual o nome do Projeto? ");
 			pro.setNome(entrada.nextLine());
 
@@ -36,6 +44,7 @@ public class ProjetoCRUD {
 
 			System.out.println("Qual o numero de contemplados? ");
 			pro.setNumCont(entrada.nextInt());
+			entrada.nextLine();
 
 			System.out.println("Qual a frequencia em que esse projeto ocorrera? ");
 			pro.setFrequencia(entrada.nextLine());
@@ -51,11 +60,20 @@ public class ProjetoCRUD {
 			ProjetoCRUD.main(args);
 			break;
 		case 2:
-			System.out.println("Digite o CPF do cliente que sera deletado:");
+			System.out.println("Digite o ID do projeto que sera deletado:");
 			pDAO.removeBy(entrada.nextInt());
 			ProjetoCRUD.main(args);
 			break;
 		case 3:
+			System.out.println("Digite o ID do projeto:");
+			pro.setId(entrada.nextInt());
+			entrada.nextLine();
+			
+			System.out.println("Digite o ID da instituicao:");
+			Instituicao ins1 = iDAO.insById(entrada.nextInt());
+			pro.setInstituicao(ins1);
+			entrada.nextLine();
+			
 			System.out.println("Qual o nome do Projeto? ");
 			pro.setNome(entrada.nextLine());
 

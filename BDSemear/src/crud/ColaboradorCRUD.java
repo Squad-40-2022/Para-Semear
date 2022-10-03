@@ -34,6 +34,9 @@ public class ColaboradorCRUD {
 
 			System.out.println("Digite o Sobrenome");
 			col.setSobNome(entrada.nextLine());
+			
+			System.out.println("Digite a data de nascimento:(dd/mm/aaaa)");
+			col.setNasc(entrada.nextLine());	
 
 			System.out.println("Digite o genero: (F/M/O(Outros))");
 			col.setGenero(entrada.nextLine().charAt(0));
@@ -86,6 +89,9 @@ public class ColaboradorCRUD {
 
 			System.out.println("Digite o Sobrenome");
 			col.setSobNome(entrada.nextLine());
+			
+			System.out.println("Digite a data de nascimento:(dd/mm/aaaa)");
+			col.setNasc(entrada.nextLine());	
 
 			System.out.println("Digite o genero: (F/M/O(Outros))");
 			col.setGenero(entrada.nextLine().charAt(0));
