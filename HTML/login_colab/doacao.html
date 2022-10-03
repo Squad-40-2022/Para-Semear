@@ -105,6 +105,7 @@
                                     suporte</a></button>
                         </div>
                     </aside>
+                    <!-- Doação-->
                     <section class="col-xl-8 col-12 conteudo cont-fixed p-5">
                         <div class="card">
 
@@ -114,22 +115,22 @@
                         
                                     <div class="col">
                         
-                                        <h3 class="title">Tipo de doação:</h3>
-                        
+                                        <h3 class="title">Doação</h3>
+                                         <h6>tipo de doação:</h6>
                                         <div class="inputBox">
                                             <label for="horns">Dinheiro:</label>
-                                            <input type="checkbox" id="horns" name="horns">
+                                            <input type="radio" id="horns" name="horns">
                                 
                                         </div>     
                         
                                         <div class="inputBox">
                                             <label for="horns">Outros:</label>
-                                            <input type="checkbox" id="horns" name="horns">
+                                            <input type="radio" id="horns" name="horns">
                                         </div> 
-                                        
+                                  <br>
                                         <h6>Descreva sua doação:</h6>
                                         <textarea name="Decrição" id="descri_doacao" cols="30" rows="5"></textarea>
-                                  
+                                  <br>
                                         <h6>Qual ONG?</h6>
                                        <div class="inputBox">
                                         <select name="ONG" id="doacao_ong_select">
@@ -154,26 +155,31 @@
                         
                                         <div class="inputBox">
                                             <label for="horns">Sim:</label>
-                                            <input type="checkbox" id="horns" name="horns">
+                                            <input type="radio" id="horns" name="horns">
                                 
                                         </div>     
                             
                                         <div class="inputBox">
                                             <label for="horns">Não:</label>
-                                            <input type="checkbox" id="horns" name="horns">
+                                            <input type="radio" id="horns" name="horns">
                                         </div> 
-                        
+                                   <br>
                                         <div class="flex">
                                             <div class="inputBox">
-                                                <span>quantidade</span>
+                                                <span>Quantidade</span>
                                                 <input type="number" placeholder="5">
                                             </div>
+                                        <br>
                                             <div class="inputBox">
                                                 <span>Data</span>
                                                 <input type="datetime" placeholder="10/2/2022">
                                             </div>
                                         </div>
-                                              
+                                    <br>
+                                    <div class="mb-3">
+                                        <label for="formFile" class="form-label"> <h6> Coloque aqui o comprovante de pagamento:</h6></label>
+                                        <input class="form-control" type="file" id="formFile">
+                                      </div>
                                         <h6>Ao prosseguir você concorda que sua solicitação de doação será direcionada para o site da ong e seus dados armazenados aqui
                                             serão apenas para o retorno dos gastos feitos através de recibos.
                                         </h6>
@@ -189,7 +195,7 @@
                                 </a>
                                 -->
                             </form>
-                        
+                        <br>
                             <!-- mudar dps o link para o css, está bugado, mas o tempo de entrega é curto -->
                             <a href="#"><button style="background: #d89959; border-radius: 10px; padding: 15px; cursor: pointer; color: #fff; border: none; font-size: 16px;">Prosseguir com a doação</button></a>
                            
@@ -199,6 +205,7 @@
                 </div>
 
             </div>
+            <!-- !doação-->
 
         </div>
         <!--CONTEUDO-->
