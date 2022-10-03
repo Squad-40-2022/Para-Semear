@@ -15,7 +15,7 @@ public class ColaboradorCRUD {
 
 		int menu;
 
-		System.out.println("========== CLIENTE ==========");
+		System.out.println("========== COLABORADOR ==========");
 		System.out.println("1 - Cadastrar colaborador");
 		System.out.println("2 - Remover colaborador");
 		System.out.println("3 - Atualizar colaborador");
@@ -69,11 +69,15 @@ public class ColaboradorCRUD {
 			ColaboradorCRUD.Colaborador(args);
 			break;
 		case 2:
-			System.out.println("Digite o CPF do cliente que sera deletado:");
+			System.out.println("Digite o ID do cliente que sera deletado:");
 			colaboradorDAO.removeBy(entrada.nextInt());
 			ColaboradorCRUD.Colaborador(args);
 			break;
 		case 3:
+			System.out.println("Digite o ID do cliente:");
+			col.setId(entrada.nextInt());
+			entrada.nextLine();
+			
 			System.out.println("Digite o CPF:(xxx.xxx.xxx-xx)");
 			col.setCpfOrCnpj(entrada.nextLine());
 
