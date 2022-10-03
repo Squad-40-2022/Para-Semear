@@ -90,7 +90,7 @@ public class RelatorioDAO {
 
 	public void update(Relatorio rel) {
 
-		String sql = "update cliente SET ano_rel = ?, mes_rel = ?, projetos = ?, mat_use_rel = ?, valor_rel = ?, num_cont_rel = ?, qtd_vol = ?, id_ins = ? where id_rel = ?";
+		String sql = "update relatorio SET ano_rel = ?, mes_rel = ?, projetos = ?, mat_use_rel = ?, valor_rel = ?, num_cont_rel = ?, qtd_vol = ?, id_ins = ? where id_rel = ?";
 
 		try {
 

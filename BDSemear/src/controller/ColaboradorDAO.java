@@ -18,7 +18,7 @@ public class ColaboradorDAO {
 
 	public void save(Colaborador col) {
 
-		String sql = "INSERT INTO colaborador(cpf_cnpj_col, nome_col, dn_col, tel_col, email_col, senha_col, uf_col, sn_col, sexo_col, end_col, vol, dis_col, cid_col)" + " VALUE(?,?,?,?,?,?,?,?,?,?,?,?,?)";
+		String sql = "INSERT INTO colaboradores(cpf_cnpj_col, nome_col, dn_col, tel_col, email_col, senha_col, uf_col, sn_col, sexo_col, end_col, vol, dis_col, cid_col)" + " VALUE(?,?,?,?,?,?,?,?,?,?,?,?,?)";
 		
 		try {
 			
@@ -64,7 +64,7 @@ public class ColaboradorDAO {
 
 	public void removeBy(int id) {
 
-		String sql = "DELETE FROM colaborador WHERE id_col=?";
+		String sql = "DELETE FROM colaboradores WHERE id_col=?";
 
 		try {
 			conn = Conexao.createConnectionToMySQL();
@@ -96,7 +96,7 @@ public class ColaboradorDAO {
 	
 	public void update(Colaborador col) {
 
-		String sql = "update colaborador SET cpf_cnpj_col = ?,nome_col = ?, dn_col = ?, tel_col = ?, email_col = ?, senha_col = ?, uf_col = ?, sn_col = ?, sexo_col = ?, end_col = ?, vol = ?, dis_col = ?, cid_col = ? where id_col = ?";
+		String sql = "update colaboradores SET cpf_cnpj_col = ?,nome_col = ?, dn_col = ?, tel_col = ?, email_col = ?, senha_col = ?, uf_col = ?, sn_col = ?, sexo_col = ?, end_col = ?, vol = ?, dis_col = ?, cid_col = ? where id_col = ?";
 		
 		try {
 			
@@ -144,7 +144,7 @@ public class ColaboradorDAO {
 
 	public List<Colaborador> getColaboradores() {
 
-		String sql = "SELECT * FROM colaborador";
+		String sql = "SELECT * FROM colaboradores";
 
 		List<Colaborador> colaboradores = new ArrayList<Colaborador>();
 
@@ -200,7 +200,7 @@ public class ColaboradorDAO {
 
 	public Colaborador colByCpf(String cpf) {
 
-		String sql = "SELECT * FROM colaborador WHERE cpf_cnpj_col=?";
+		String sql = "SELECT * FROM colaboradores WHERE cpf_cnpj_col=?";
 
 		ResultSet rset = null;
 
