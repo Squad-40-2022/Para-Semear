@@ -87,6 +87,10 @@ header {
     color: #1A2915;
     background-color: #B29272;
 }
+.img-fundo{
+    max-height: 100vh;
+    width: auto;
+}
 /*CONTEUDO*/
 
 footer {
