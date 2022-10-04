@@ -103,6 +103,17 @@ footer {
 ::-webkit-scrollbar-track {
   background-color: #DDD3CA;
 }
-@media (max-width:900px) {
-  
+@media(max-width:900px) {
+.ajuda{
+display:inline;
+width:10%; 
+align-items:center;
+justify-content: center;
 }
+#dados{
+  text-align: left;
+  width: 20rem;
+  padding: 1rem;
+}
+}
+
