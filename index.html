@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,7 +10,6 @@
   <link rel="stylesheet" href="CSS/index.css">
   <link rel="icon" type="imagem/png" href="IMG/icon-nav.png" />
 </head>
-
 <body>
   <!--BARRA DE NAVEGAÇÃO-->
   <header>
@@ -39,7 +37,6 @@
           <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
             <img src="IMG/Icon-login.png" alt="">
           </button>
-
           <!-- Modal -->
           <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
@@ -47,7 +44,7 @@
               <div class="modal-content p-4">
                 <h3 class="mb-4">Olá! Você é?</h3>
                 <button class="btn bt-log mb-4"><a href="HTML/login_c.html" class="tx">Colaborador</a></button>
-                <button class="btn bt-log mb-4"><a href="HTML/login_i.html" class="tx">Instituição</a></button>
+                <button class="btn bt-log mb-4"><a href="HTML/log_inst.html" class="tx">Instituição</a></button>
               </div>
             </div>
           </div>
@@ -57,7 +54,6 @@
     </div>
   </header>
   <!--BARRA DE NAVEGAÇÃO-->
-
   <!--CONTEUDO-->
   <div>
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
@@ -72,27 +68,27 @@
       <div class="carousel-inner">
         <div class="carousel-item active bloco01">
           <div class="d-flex justify-content-center align-items-center">
-            <img src="IMG/doador.png" class="h-100" alt="..." style="vertical-align:middle;">
+            <img src="IMG/doador.png" class="img-ca" alt="..." style="vertical-align:middle;">
             <div class="texto-slide p-4 tx-slide">
               <h1 class="mx-5">Venha ser a engrenagem na roda da educação</h1>
-              <a href="./HTML/cadastro_colab.html" class="btn bt-slide mx-5">Seja um doador</a>
+              <a href="./HTML/cadastro_colab.html" class="btn bt-slide mx-5">Seja um colaborador</a>
             </div>
           </div>
         </div>
         <div class="carousel-item bloco01">
           <div class="d-flex justify-content-center align-items-center">
-            <img src="IMG/instituicao.png" class="h-100" alt="..." style="vertical-align:middle;">
+            <img src="IMG/instituicao.png" class="img-ca" alt="..." style="vertical-align:middle;">
             <div class="texto-slide px-5 py-4 tx-slide">
-              <h1 class="mx-5">Venha ser a engrenagem na roda da educação</h1>
-              <a href="./HTML/cadastro_inst.html" class="btn bt-slide mx-5">Cadastre sua instituição</a>
+              <h1 class="mx-5">Vamos girar a roda juntos...</h1>
+              <a href="./HTML/cadastro_inst.html" class="btn bt-slide mx-5">Inscreva sua instituição</a>
             </div>
           </div>
         </div>
         <div class="carousel-item bloco01">
           <div class="d-flex justify-content-center align-items-center">
-            <img src="IMG/voluntario.png" class="h-100" alt="..." style="vertical-align:middle;">
+            <img src="IMG/voluntario.png" class="img-ca" alt="..." style="vertical-align:middle;">
             <div class="texto-slide px-5 py-4 tx-slide">
-              <h1 class="mx-5">Faça parte da mudança</h1>
+              <h1 class="mx-5">Faça parte da mudança...</h1>
               <a href="./HTML/cadastro_colab.html" class="btn bt-slide mx-5">Seja um voluntário</a>
             </div>
           </div>
@@ -112,7 +108,7 @@
   </div>
   <div class="bloco02 p-5">
     <div class="d-flex justify-content-center align-items-center bloco02">
-      <img src="IMG/logo/logo-fundo.png" alt="" class="img-fluid">
+      <img src="IMG/logo/logo-fundo.png" alt="" class="img-fundo">
       <div class="texto-slide px-5 py-4 tx-pg">
         <h1 class="mx-5"><big>Quem somos ...</big></h1>
         <h5 class="mx-5">Somos um grupo que acreditamos que todos tem o direito de se comunicar e participar da
@@ -124,7 +120,7 @@
   </div>
   <div class="bloco02">
     <div class="d-flex justify-content-end align-items-center">
-      <img src="IMG/logo/logo-esq.png" alt="">
+      <img class="img-fundo" src="IMG/logo/logo-esq.png" alt="">
       <div class="texto-slide px-5 py-4 tx-pg">
         <h1 class="mx-5 text-start"><big>Conheça nossos parceiros</big></h1>
         <h5 class="mx-5">Em construção...</h5>
@@ -132,7 +128,6 @@
     </div>
   </div>
   <!--CONTEUDO-->
-
   <!--RODAPÉ-->
   <footer>
     <div class="nav justify-content-between container">
@@ -141,7 +136,7 @@
         <ul class="nav flex-column">
           <li>Av. Borges de Medeiros, 159<br>Porto Alegre/RS</li>
           <li>(51)3456-5555</li>
-          <li class="nav-item"><a href="#" class="nav-link p-0 text-white">Entre em
+          <li class="nav-item"><a href="HTML/ajuda.html" class="nav-link p-0 text-white">Entre em
               contato</a>
           </li>
         </ul>
@@ -156,18 +151,14 @@
         </form>
       </div>
     </div>
-
     <div class="row">
       <p class="m-0 text-center">© 2022 Company, Inc. All rights reserved.</p>
     </div>
-
   </footer>
   <!--RODAPÉ-->
-
   <!--SCRIPT-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
     crossorigin="anonymous"></script>
 </body>
-
 </html>
