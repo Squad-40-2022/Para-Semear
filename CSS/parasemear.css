@@ -14,6 +14,16 @@ header {
     color: #1A2915;
     background-color: white;
 }
+
+.bt-menu {
+    width: 100%;
+    height: 40px;
+    text-align: start;
+    margin-bottom: 20px;
+    color: #1A2915;
+    background-color: white;
+}
+
 .bt-log:hover {
     background-color: #B29272;
 }
@@ -29,6 +39,19 @@ header {
     background-color: #DDD3CA;
     color: #1A2915;
 }
+/*CABEÇALHO*/
+
+.bloco01{
+    height: calc(100vh - 110px);
+}
+
+.bloco02{
+    height: 100vh;
+}
+.texto-slide{
+    position: absolute;
+}
+/*CONTEUDO*/
 
 .conteudo {
     background-color: white;
