@@ -1,7 +1,7 @@
 /*CABEÇALHO*/
 .main {
   background-color: #eeeeee;
-  min-height: 90vh;
+  min-height: 100vh;
 }
 header {
   background-color: #B29272;
@@ -82,10 +82,9 @@ label{
 
 /*Rodape*/
 footer {
-  display: grid;
-  color: #ffffff;
+  padding: 20px;
   background-color: #B29272;
-  text-align: center;
+  color: #ffffff;
 }
 /*Rodape*/
 
