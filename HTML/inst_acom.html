@@ -11,34 +11,9 @@
     <link rel="stylesheet" href="../CSS/style-log_inst.css">
     <link rel="stylesheet" href="../CSS/style-log_colab.css">
     <link rel="icon" type="imagem/png" href="../IMG/icon-nav.png" />
-    <style>
-        .lin {
-            color: #533d27;
-        }
-
-        .lon {
-            color: darkgreen;
-        }
-
-
-        a:visited {
-            text-decoration: none;
-            color: darkgreen;
-        }
-
-        a:hover {
-            text-decoration: none;
-            color: #533d27;
-        }
-
-        a:active {
-            text-decoration: none;
-            color: green;
-        }
-    </style>
 </head>
 
-<body>
+<body class="main">
     <!--BARRA DE NAVEGAÇÃO-->
     <header>
         <div class="container">
@@ -87,9 +62,7 @@
                                 data-bs-target="#staticBackdrop004">Voluntarios</button>
                             <button class="btn bt-log" data-bs-toggle="modal"
                                 data-bs-target="#staticBackdrop005">Relatórios</button>
-                            <button class="btn bt-log">Configurações e privacidade</button>
-                            <button class="btn bt-log"  role="button"><a class="tx" href="/HTML/ajuda.html">Ajuda</a></button>
-                            <button class="btn bt-log"  role="button"><a class="tx" href="/index.html">Sair</a></button>
+                            <button class="btn bt-log"><a href="../index.html" class="tx">Sair</a></button>
                         </div>
                     </div>
                 </aside>
@@ -153,8 +126,8 @@
                 </div>
                 <div class="modal-footer">
 
-                    <a href="./dados.html"><button type="submit" class="btnn tx">Alterar</button></a>
-                    <button type="button" class="btnn tx" data-bs-dismiss="modal">Finalizar</button>
+                    <a href="./dados.html"><button type="submit" class="btn bt-inst tx">Alterar</button></a>
+                    <button type="button" class="btn bt-inst tx" data-bs-dismiss="modal">Finalizar</button>
                 </div>
             </div>
         </div>
@@ -187,7 +160,7 @@
                 </div>
                 <div class="modal-footer">
 
-                    <a href="./projetos.html"><button type="submit" class="btnn tx">Novo</button></a>
+                    <a href="./projetos.html"><button type="submit" class="btn bt-inst tx">Novo</button></a>
                 </div>
             </div>
         </div>
@@ -239,8 +212,8 @@
                 </div>
                 <div class="modal-footer">
 
-                    <button type="submit" class="btnn tx ">Atualizar</button>
-                    <button type="button" class="btnn tx" data-bs-dismiss="modal">Finalizar</button>
+                    <button type="submit" class="btn bt-inst tx">Atualizar</button>
+                    <button type="button" class="btn bt-inst tx" data-bs-dismiss="modal">Finalizar</button>
                 </div>
             </div>
         </div>
@@ -342,8 +315,8 @@
             </div>
             <div class="modal-footer">
 
-                <button type="submit" class="btnn tx">Atualizar</button>
-                <button type="button" class="btnn tx" data-bs-dismiss="modal">Finalizar</button>
+                <button type="submit" class="btn bt-inst tx">Atualizar</button>
+                <button type="button" class="btn bt-inst tx" data-bs-dismiss="modal">Finalizar</button>
             </div>
         </div>
     </div>
@@ -402,8 +375,8 @@
                 </div>
                 <div class="modal-footer">
 
-                    <button type="submit" class="btnn tx">enviar</button>
-                    <button type="button" class="btnn tx" data-bs-dismiss="modal">Finalizar</button>
+                    <button type="submit" class="btn bt-inst tx">enviar</button>
+                    <button type="button" class="btn bt-inst tx" data-bs-dismiss="modal">Finalizar</button>
                 </div>
 
                 <div>
@@ -420,45 +393,45 @@
     <!--modal 005 Prestação de contas-->
     <!--BARRA DE NAVEGAÇÃO-->
 
-
     <!--CONTEUDO-->
-    <div class="container conteudo my-4 p-4">
+    <div>
         <main class="container conteudo my-4 p-4">
             <div class="border-bottom">
                 <img src="../IMG/user.png" alt="">
                 <h2>Verde Oliva</h2>
             </div>
+
         </main>
         <div class="container">
-            <div class="mb-4 row justify-content-between"></div>
-            <aside class="col-3 conteudo">
-                <div class="row px-5">
-                    <h5> Visualizações</h5>
-                    <p> 9 visitas na ultima semana</p>
-                    <p class="sub"> Grafico de visitas aqui</p>
-                </div>
-            </aside>
-            <section class="col-xl-8 col-12 conteudo cont-fixed p-5">
-                <div class="row coment">
-                    <h3> Doaçoes no ultimo mês</h3>
-                    <p>Gráfico de doações aqui</p>
-                    <br>
-                    <h3> Voluntarios no ultimo mês</h3>
-                    <p>Gráfico de novos voluntarios aqui</p>
-                    <br>
-                    <h3> Acolhidos no ultimo mês</h3>
-                    <p>Gráfico de crescimento de contemplados aqui</p>
-                    <br>
-                    <h3> Veja as Instituições que mais fizeram eventos esse mês</h3>
-                    <p>Lista das instituições aqui</p>
-                    <br>
-                    <h3> Projetos Que tiveram ótimo desempenho</h3>
-                    <p>dados dos projetos</p>
-                </div>
-            </section>
-        </div>
-    </div>
+            <div class="mb-4 row justify-content-between">
+                <aside class="col-3 conteudo">
+                    <div class="row p-5">
+                        <h5> Visualizações</h5>
+                        <p> 9 visitas na ultima semana</p>
+                        <p class="sub"> Grafico de visitas aqui</p>
+                    </div>
+                </aside>
+                <section class="col-xl-8 col-12 conteudo cont-fixed p-5">
+                        <h3> Doaçoes no ultimo mês</h3>
+                        <p>Gráfico de doações aqui</p>
+                        <br>
+                        <h3> Voluntarios no ultimo mês</h3>
+                        <p>Gráfico de novos voluntarios aqui</p>
+                        <br>
+                        <h3> Acolhidos no ultimo mês</h3>
+                        <p>Gráfico de crescimento de contemplados aqui</p>
+                        <br>
+                        <h3> Veja as Instituições que mais fizeram eventos esse mês</h3>
+                        <p>Lista das instituições aqui</p>
+                        <br>
+                        <h3> Projetos Que tiveram ótimo desempenho</h3>
+                        <p>dados dos projetos</p>
+                </section>
+            </div>
 
+        </div>
+
+    </div>
     <!--CONTEUDO-->
 
     <!--RODAPÉ-->
@@ -469,7 +442,7 @@
                 <ul class="nav flex-column">
                     <li>Av. Borges de Medeiros, 159<br>Porto Alegre/RS</li>
                     <li>(51)3456-5555</li>
-                    <li class="nav-item"><a href="#" class="nav-link p-0 text-white">Entre em
+                    <li class="nav-item"><a href="ajuda.html" class="nav-link p-0 text-white">Entre em
                             contato</a>
                     </li>
                 </ul>
