@@ -59,7 +59,7 @@ public class ColaboradorCRUD {
 
 			System.out.println("Qual sua disponibilidade para voluntariado?");
 			System.out.println("*marque 1 ou mais opções");
-			col.setCidade(entrada.nextLine());
+			col.setDisp(entrada.nextLine());
 
 			System.out.println("Digite o email:");
 			col.setEmail(entrada.nextLine());

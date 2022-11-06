@@ -138,7 +138,7 @@ public class DoacaoDAO {
 
 	public List<Doacao> getDoacoes() {
 
-		String sql = "SELECT * FROM doacao_instituicoes_colaboradores";
+		String sql = "SELECT * FROM doacao";
 
 		List<Doacao> doacoes = new ArrayList<Doacao>();
 

@@ -28,7 +28,7 @@ tel_col VARCHAR(15),
 email_col VARCHAR(50),
 senha_col VARCHAR(20),
 end_col VARCHAR(50),
-cid_col VARCHAR(10),
+cid_col VARCHAR(30),
 uf_col VARCHAR(2),
 vol CHAR(1),
 dis_col VARCHAR(50)
