@@ -97,4 +97,5 @@ Demais integrantes:
 
 ## Conclusão
 Obrigado por ler e se interessar no nosso projeto!
-![Obrigado](https://user-images.githubusercontent.com/80060106/201259030-80ccee4b-5bb9-48ae-8489-5f69101d26b6.PNG)
+![MicrosoftTeams-image (8)](https://user-images.githubusercontent.com/98715088/201763813-fcc06e09-6554-445a-9b46-3d2e78ce20ca.png)
+
