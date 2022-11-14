@@ -1,7 +1,4 @@
 <h1 align="center"> Para Semear 🌱 </h1>
-
-
-
 <p align="center">
   <img src="https://user-images.githubusercontent.com/80060106/200827292-885c89c2-163d-4f61-9432-5f6b2bc2810d.png"/>
 </p>
@@ -13,6 +10,9 @@ https://squad-40-2022.github.io/Para-Semear/
 <p align="center">
 <img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge"/>
 </p>
+
+## Funcionalidades do projeto
+![para semear](https://user-images.githubusercontent.com/80060106/201255870-f9394d49-95fd-4381-9eb8-27b801014493.gif)
 
 ## Índice 
 * [Acesso ao Projeto](#Acesso-ao-projeto)
@@ -54,10 +54,6 @@ https://1drv.ms/x/s!Ap62E966la0_gccgxwTJWGeZL_SjOg?e=gwzozu
 
 ## Distribuição das atividades
 As atividades foram distribuidas de acordo com tempo disponivel, de cada membro e sua familiaridade/competencia para execussão
-
-## Funcionalidades do projeto
-![para semear](https://user-images.githubusercontent.com/80060106/201255870-f9394d49-95fd-4381-9eb8-27b801014493.gif)
-
 ## Ferramenta de gerenciamento de projeto
 - `Miro` Para brains storm e disposição de ideias
 - `Teams & Whatsapp` Para reuniões e comunicação
